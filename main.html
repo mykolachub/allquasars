@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <title>Allquasars: Main</title>
 </head>
 <body class="page__body">
     <div class="page__wrapper">
         <div class="page__content">
-            
+            <!-- HEADER -->
+            <header class="header">
+                <div class="header__logo">
+                    <a class="header__logo-a" href="landing.html">Logo</a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <button id="fisrtMoreBtn" class="header__nav-btn">
+                                Помощь
+                            </button>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-a" href="#">
+                                Выйти
+                            </a>
+                        </li>
+                        <!-- PROFILE -->
+                        <li class="header__nav-item header__profile">
+                            <!-- NAME -->
+                            <!-- При клике -> меню редактированя профиля -->
+                            <div class="header__profile-name">Имя Фамилия</div>
+                            <div class="header__profile-photo">
+                                <img class="header__profile-img" src="/images/main/profile.jpg" alt="Profile">
+                            </div>
+                        </li>
+                        <!-- END OF PROFILE -->
+                    </ul>
+                </nav>
+            </header>
+            <!-- END OF HEADER -->
         </div>
     </div>
     <script src="js/main.js"></script>
