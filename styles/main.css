@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html{
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    line-height: 1.25;
+}
+
+.page__wrapper{
+    width: 100%;
+    height: auto;
+}
+
+.page__content{
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    margin: 0 auto;
+}
