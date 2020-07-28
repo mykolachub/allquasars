@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         passwordcheckWrapper = document.getElementById('passwordcheckWrapper'),
         inputPassworCheck = document.getElementById('inputPassworCheck');
 
+    // submit btn
+    let buttonSubmit = document.getElementById('buttonSubmit');
+
+    // popup
+    let popupWrapper = document.getElementById('popupWrapper'),
+        popupClose = document.getElementById('popupClose');
 
     artistBtn.addEventListener('click', ()=>{
         if (artistBtn.classList.contains("form__type-btn--clicked") == true) {
@@ -99,6 +105,14 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     inputPassworCheck.addEventListener('blur', ()=>{
         inputBlured(passwordcheckWrapper);
+    });
+
+    buttonSubmit.addEventListener('click', ()=>{
+        popupWrapper.classList.add('popup-active');
+    });
+
+    popupClose.addEventListener('click', ()=>{
+        popupWrapper.classList.remove('popup-active');
     });
 
     // main functions

@@ -37,6 +37,74 @@ html{
     background: #f5f6fa;
 }
 
+/* popup */
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 4rem;
+    opacity: 0;
+} 
+
+.popup-active{
+    display: flex;
+    animation: popup-active 250ms ease 250ms 1 normal forwards;
+}
+
+@keyframes popup-active{
+    to{
+        opacity: 1;
+    }
+}
+
+.popup__content{
+    max-width: 46rem;
+    width: calc(100% - 4rem);
+    background: white;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.popup__content-headering{
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-family: var(--font-eUkrREG);
+}
+
+.popup__content-text{
+    font-family: var(--font-eUkrLGH);
+    font-size: 1.6rem;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.popup__content-close{
+    width: 100%;
+}
+
+.popup__content-btn{
+    display: inline-block;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #378ff6;
+    font-family: var(--font-eUkrLGH);
+    padding: 0 1.5rem;
+    font-size: 1.6rem;
+    background-color: #378ff6;
+    color: white;
+    box-shadow: 0 6px 12px rgba(55,143,246, 0.25);
+    cursor: pointer;
+}
+
 /* wave*/
 
 .page__wave{
@@ -98,8 +166,11 @@ html{
 .form__headering{
     font-size: 2.2rem;
     font-family: var(--font-eUkrREG);
-    margin-bottom: 4rem;
     text-align: center;
+}
+
+.form__headering{
+    margin-bottom: 4rem;
 }
 
 .form__headering-a{
