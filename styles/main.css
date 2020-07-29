@@ -41,7 +41,7 @@ html{
 }
 
 .page__content{
-    width: 100%;
+    width: calc(100% - 4rem);
     height: auto;
     max-width: 1440px;
     margin: 0 auto;
@@ -59,7 +59,7 @@ html{
     grid-template-columns: auto 1fr;
     position: relative;
     z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
     padding: 0 2rem;
 }
 
@@ -164,4 +164,136 @@ html{
     height: 100%;
     border-radius: 50%;
     object-fit: contain;
+}
+
+/* PROFILE */
+
+.profile{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.75rem;
+}
+
+.profile__content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2.75rem;
+}
+
+.profile__avatar{
+}
+
+.profile__avatar-wrapper{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2.75rem;
+}
+
+.profile__avatar-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 100%;
+    margin-bottom: 2.75rem;
+}
+
+.profile__avatar-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f4f6f6;
+    border-radius: 50%;
+    transition: all 250ms ease;
+    cursor: pointer;
+}
+
+.profile__avatar-content:hover{
+    border-color: rgb(55, 143, 246, 0.75);
+}
+
+.profile__avatar-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%; 
+}
+
+.profile__avatar-image[alt]{
+    color: transparent;
+    font-size: 0px;
+}
+
+/* avatar buttons */ 
+
+.profile__avatar-button{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    height: 50px;
+}
+
+.profile__avatar-button-wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.profile__avatar-button-item{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.profile__avatar-button-item:hover{
+    background-color: var(--сolor-profile-bg);
+}
+
+.profile__avatar-button-upload{
+    color: #378ff6;
+    border-radius: 5px;
+}
+
+.profile__avatar-button--disabled:hover{
+    background-color: transparent;
+}
+
+.profile__avatar-button--disabled{
+    cursor: not-allowed;
+    color: rgba(0,0,0, 0.5);
+}
+
+/* profile bio */
+
+.profile__bio{
+    width: 100%;
+    height: 75vh;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* main */
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* footer */
+
+.footer{
+
 }
