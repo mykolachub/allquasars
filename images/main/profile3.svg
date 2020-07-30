@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px"><g transform="matrix(0.369693, 0, 0, 0.369693, 161.359, 161.359)"><g>
+	<g>
+		<path d="M497,51H15C6.716,51,0,57.716,0,66v219h194.988l51.725-40.779c5.447-4.295,13.127-4.295,18.574,0L512,438.724V66    C512,57.716,505.284,51,497,51z M387,241c-35.841,0-65-29.159-65-65s29.159-65,65-65s65,29.159,65,65S422.841,241,387,241z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<polygon points="0,315 0,438.725 156.935,315   " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<polygon points="256,275.101 20.202,461 491.799,461   " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g></g> </svg>

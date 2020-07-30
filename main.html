@@ -45,26 +45,39 @@
             <!-- PROFILE -->
             <div class="profile">
                 <div class="profile__content">
-                    <!-- аватарка -->
-                    <div class="profile__avatar">
-                        <div class="profile__avatar-wrapper">
-                            <div class="profile__avatar-container">
-                                <div class="profile__avatar-content">
-                                    <img class="profile__avatar-image" src="/images/main/avtar.svg" alt="your avatar">
-                                </div>
+                    <!-- навигация по настройке профиля и полезные ссылки -->
+                    <div class="profile__nav">
+                        
+                    </div>
+                    <!-- все о пользователе -->
+                    <div class="profile__settings">
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Ваша фотография</span>
+                        </div>
+                        <!-- аватарка -->
+                        <div class="profile__avatar">
+                            <!-- если картинка стоит по умолчанию -> вкл класс --unset, 
+                                 если пользователь загрузил фото -> класс --unset удаляется-->
+                            <div class="profile__avatar-wrapper profile__avatar-wrapper--unset">
+                                <img class="profile__avatar-image" src="images/main/profile2.svg" alt="avatar">
                             </div>
                             <div class="profile__avatar-button">
-                                <span class="profile__avatar-button-wrapper">
-                                    <button class="profile__avatar-button-item profile__avatar-button-upload">Загрузить</button>
+                                <!-- кнопка загрузки фото -->
+                                <button class="profile__avatar-button-item profile__avatar-button-upload">Загрузить</button>
+                                <!-- если картинка стоит по умолчанию -> вкл класс --disabled  
+                                     если пользователь загрузил фото -> класс --disabled удаляется и дальше замена фото -->
+                                <button class="profile__avatar-button-item profile__avatar-button-change profile__avatar-button--disabled">Поменять</button>
+                            </div>
+                            <div class="profile__avatar-message">
+                                <span class="profile__avatar-message-item">
+                                    Размер изображения не должен превышать 2МБ.
                                 </span>
-                                <span class="profile__avatar-button-wrapper">
-                                    <button class="profile__avatar-button-item profile__avatar-button-change profile__avatar-button--disabled">Поменять</button>
+                                <span class="profile__avatar-message-item">
+                                    Доступные форматы JPG, JPEG или PNG.
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <!-- все о пользователе -->
-                    <div class="profile__bio"></div>
                 </div>
             </div>
             <!--END OF PROFILE -->
