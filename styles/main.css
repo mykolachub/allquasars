@@ -203,7 +203,7 @@ html{
 
 .profile__nav-content{
     width: 100%;
-    height: 250px;
+    height: auto;
     position: sticky;
     position: -webkit-sticky;
     top: 2rem;
@@ -215,7 +215,7 @@ html{
 .profile__nav-account{
     width: 100%;
     height: auto;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2rem;
     border-bottom: var(--border-setting-section);
 }
 
@@ -290,6 +290,100 @@ html{
     color: #f63737;
 }
 
+/* nav list */
+
+.profile__nav-list{
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding-bottom: 2rem;
+    border-bottom: var(--border-setting-section);
+}
+
+.profile__nav-list:last-of-type{
+    border: 0;
+    padding-top: 2rem;
+    padding-bottom: 0;
+}
+
+.profile__nav-btn{
+    width: 100%;
+    height: 52px;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    color: black;
+    transition: all 500ms ease;
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: start;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding-left: 5rem;
+}
+
+
+
+.profile__nav-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5rem;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(-50%);
+    background-position: center;
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    transition: all 500ms ease;
+}
+
+.profile__nav-btn-profile::before{
+    background-image: url(../images/main/user.svg);
+}
+
+.profile__nav-btn-lock::before{
+    background-image: url(../images/main/lock.svg);
+}
+
+.profile__nav-btn-help::before{
+    background-image: url(../images/main/help.svg);
+}
+
+.profile__nav-btn:hover,
+.profile__nav-btn--active{
+    color: #378ff6;
+    background-color: #f4f6f6;
+}
+
+.profile__nav-a{
+    width: 100%;
+    display: block;
+    color: #8b8b8b;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    text-decoration: none;
+    transition: all 250ms ease;
+}
+
+.profile__nav-item:nth-of-type(1) .profile__nav-a{
+    padding-bottom: 1rem;
+}
+
+.profile__nav-item:nth-of-type(2) .profile__nav-a{
+    padding: 1rem 0;
+}
+
+.profile__nav-item:nth-of-type(3) .profile__nav-a{
+    padding-top: 1rem;
+}
+
+.profile__nav-a:hover{
+    color: black;
+}
+
 /* profile__settings */
 
 .profile__settings{
@@ -324,7 +418,6 @@ html{
     grid-column-gap: 2.75rem;
     padding-bottom: 2.75rem;
     border-bottom: var(--border-setting-section);
-    border-radius: 5px;
 }
 
 .profile__avatar-wrapper,
