@@ -102,6 +102,38 @@
                                 </span>
                             </div>
                         </div>
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Персональные данные</span>
+                        </div>
+                        <!-- во все инпуты передай value то которое ввел пользователь при регистрации чтобы заново не вводить! -->
+                        <!-- имя и фамилия -->
+                        <div class="portfolio__form portfolio__form--grided portfolio__initials">
+                            <span id="nameWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Имя">
+                                <input id="inputName" class="portfolio__form-input" type="text" value="Николай" autocomplete="off" />
+                            </span>
+                            <span id="surnameWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Фамилия">
+                                <input id="inputSurname" class="portfolio__form-input" type="text" value="Чуб" autocomplete="off" />
+                            </span>
+                        </div>
+                        <!-- др и тип пользователя -->
+                        <div class="portfolio__form portfolio__form--grided portfolio__age">
+                            <span id="dateWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Дата рождения">
+                                <input id="inputDate" class="portfolio__form-input portfolio__age-input" value="2002-12-23" type="date" name=""/>
+                            </span>
+                            <!-- здесь в value передай тип пользователя. далее с этим инпутом пользователь никак не может работать -->
+                            <span id="typeWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Тип">
+                                <input id="inputType" class="portfolio__form-input portfolio__type-input" type="text" value="Заказчик" autocomplete="off" tabindex="-1" />
+                            </span>
+                        </div>
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">О вас</span>
+                        </div>
+                        <!-- о себе -->
+                        <div class="portfolio__form portfolio__bio">
+                            <span id="bioWrapper" class="portfolio__form-wrap portfolio__bio-wrap">
+                                <textarea id="inputBio" class="portfolio__form-input portfolio__bio-input" name="" placeholder="Расскажите немного о себе"></textarea>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
