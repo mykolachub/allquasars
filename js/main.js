@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', () =>{
         inputDate = document.getElementById('inputDate');
 
     // mail
-    let typeWrapper = document.getElementById('typeWrapper'),
-    inputType = document.getElementById('inputType');
+    let typeWrapper = document.getElementById('typeWrapper');
+
+    // textarea
+    let inputBio = document.getElementById('inputBio'),
+        BioCounter = document.getElementById("BioCounter");
 
     // mail
     let mailWrapper = document.getElementById('mailWrapper'),
@@ -53,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     inputDate.addEventListener('blur', ()=>{
         inputBlured(dateWrapper);
+    });
+
+    inputBio.addEventListener('input', ()=>{
+        BioCounter.innerText = inputBio.textLength;
     });
 
     // вот этот бред нужен для инпутов с value

@@ -623,6 +623,11 @@ html{
     padding: 1rem;
 }
 
+.portfolio__comment-text{
+    font-size: 1.6rem;
+    color: #8b8b8b;
+    font-family: var(--font-eUkrLGH);
+}
 
 /* main */
 
