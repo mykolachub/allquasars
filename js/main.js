@@ -27,8 +27,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     let inputBio = document.getElementById('inputBio'),
         BioCounter = document.getElementById("BioCounter");
 
+    // gallery
+    let galleryWrapper = document.getElementById('galleryWrapper'),
+        inputGallery = document.getElementById('inputGallery');
+
     // mail
     let mailWrapper = document.getElementById('mailWrapper'),
+        galleryInputWrapper = document.getElementById('galleryInputWrapper'),
         inputMail = document.getElementById('inputMail');
 
     //
@@ -87,4 +92,25 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
         //console.log(e.firstElementChild.value);
     };
+
+    // получение и загрузка картинок в галерее
+    inputGallery.addEventListener('change', function (e) {
+        const file = this.files[0];
+
+        // если файл был выбран
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function (e) {
+                console.log(this);
+ 
+                // создание картинки и добавление ее в поток
+                galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"><img src="${this.result}" alt="image"></div>`);
+
+            });
+
+            reader.readAsDataURL(file);
+        }
+
+    });
 });

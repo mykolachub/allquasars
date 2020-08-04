@@ -90,7 +90,7 @@
                                 <!-- кнопка загрузки фото -->
                                 <button class="profile__avatar-button-item profile__avatar-button-upload">Загрузить</button>
                                 <!-- если картинка стоит по умолчанию -> вкл класс --disabled  
-                                     если пользователь загрузил фото -> класс --disabled удаляется и дальше замена фото -->
+                                     если пользователь загрузил фото -> класс --disabled удаляется и дальше можно заменить фото -->
                                 <button class="profile__avatar-button-item profile__avatar-button-change profile__avatar-button--disabled">Поменять</button>
                             </div>
                             <div class="profile__avatar-message">
@@ -137,6 +137,20 @@
                                 <span id="BioCounter" class="portfolio__comment-text">0</span>
                                 <span class="portfolio__comment-text">/500 симв.</span>
                             </div>
+                        </div>
+                        <!-- галерея -->
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Галерея</span>
+                        </div>
+                        <div class="portfolio__form portfolio__gallery">
+                            <div id="galleryWrapper" class="portfolio__gallery-content">
+                                <div id="galleryInputWrapper" class="portfolio__gallery-item portfolio__gallery-input-wrapp">
+                                    <label for="inputGallery" class="portfolio__gallery-input">
+                                        <input type="file" id="inputGallery">
+                                    </label>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
