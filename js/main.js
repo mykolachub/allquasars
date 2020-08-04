@@ -28,12 +28,11 @@ document.addEventListener('DOMContentLoaded', () =>{
         BioCounter = document.getElementById("BioCounter");
 
     // gallery
-    let galleryWrapper = document.getElementById('galleryWrapper'),
+    let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
         inputGallery = document.getElementById('inputGallery');
 
     // mail
     let mailWrapper = document.getElementById('mailWrapper'),
-        galleryInputWrapper = document.getElementById('galleryInputWrapper'),
         inputMail = document.getElementById('inputMail');
 
     //
@@ -102,15 +101,28 @@ document.addEventListener('DOMContentLoaded', () =>{
             const reader = new FileReader();
 
             reader.addEventListener('load', function (e) {
-                console.log(this);
  
                 // создание картинки и добавление ее в поток
-                galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"><img src="${this.result}" alt="image"></div>`);
-
+                galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"><img src="${this.result}" alt="image"><span class="portfolio__gallery-delete"></span></div>`);
+                
+                // удаление изображений если нужно
+                removingImages()
             });
 
             reader.readAsDataURL(file);
         }
 
     });
+
+    function removingImages() {
+        let galleryDelete = document.querySelectorAll('.portfolio__gallery-delete');
+            
+        galleryDelete.forEach(element => {
+            element.addEventListener('click', function (e) {
+                this.parentNode.remove(); 
+            });
+        });
+    };
+    
+    
 });
