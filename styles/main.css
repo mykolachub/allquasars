@@ -508,11 +508,14 @@ html {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
     background-color: var(--color-avatar-profile-background);
-    cursor: pointer;
 }
 
 .profile__avatar-wrapper--unset {
     position: relative;
+    background-image: url(../images/main/profile2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .profile__avatar-wrapper--unset:after {
@@ -527,23 +530,13 @@ html {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /*animation: avatarBorderRotate 36000ms linear 0ms infinite normal forwards;*/
-}
-
-/*@keyframes avatarBorderRotate{
-    to{
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}*/
-
-.profile__avatar-wrapper--unset:hover:after {
-    -webkit-animation-duration: 9000ms;
-    animation-duration: 9000ms;
 }
 
 .profile__avatar-image {
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    color: transparent;
 }
 
 .profile__avatar-button {
@@ -572,6 +565,11 @@ html {
     border-radius: 5px;
     border: var(--border-avatar-profile-button);
     cursor: pointer;
+    display: inline-block;
+}
+
+.profile__avatar-button-item input {
+    display: none;
 }
 
 .profile__avatar-button-item:hover {
@@ -582,7 +580,7 @@ html {
 .profile__avatar-button--disabled {
     color: var(--color-avatar-profile-button-disabled);
     border: 0;
-    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .profile__avatar-button-upload {
@@ -740,21 +738,25 @@ html {
     height: auto;
 }
 
-.portfolio__gallery-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-/*.portfolio__gallery-content::-webkit-scrollbar {
+.portfolio__gallery::-webkit-scrollbar {
     background: #f4f6f6;
     border-radius: 5px;
     height: 1rem;
 }
 
-.portfolio__gallery-content::-webkit-scrollbar-thumb {
-    background-color: #8b8b8b;
-}*/
+.portfolio__gallery::-webkit-scrollbar-thumb {
+    background-color: #cdcccc;
+    border-radius: 5px;
+}
+
+
+.portfolio__gallery-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
 
 /* input gallery*/
 

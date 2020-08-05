@@ -83,15 +83,21 @@
                         <div class="profile__avatar">
                             <!-- если картинка стоит по умолчанию -> вкл класс --unset, 
                                  если пользователь загрузил фото -> класс --unset удаляется-->
-                            <div class="profile__avatar-wrapper profile__avatar-wrapper--unset">
-                                <img class="profile__avatar-image" src="images/main/profile2.svg" alt="avatar">
+                            <div id="avatarWrapper" class="profile__avatar-wrapper profile__avatar-wrapper--unset">
+                                <img id="avatarImage" class="profile__avatar-image" src="images/main/profile2.svg" alt="avatar">
                             </div>
                             <div class="profile__avatar-button">
                                 <!-- кнопка загрузки фото -->
-                                <button class="profile__avatar-button-item profile__avatar-button-upload">Загрузить</button>
+                                <label id="avatarUploadWrapper" class="profile__avatar-button-item profile__avatar-button-upload" for="inputAvatarUpload">
+                                    Загрузить
+                                    <input type="file" name="" id="inputAvatarUpload">
+                                </label>
                                 <!-- если картинка стоит по умолчанию -> вкл класс --disabled  
                                      если пользователь загрузил фото -> класс --disabled удаляется и дальше можно заменить фото -->
-                                <button class="profile__avatar-button-item profile__avatar-button-change profile__avatar-button--disabled">Поменять</button>
+                                <label id="avatarChangeWrapper" class="profile__avatar-button-item profile__avatar-button-change profile__avatar-button--disabled" for="inputAvatarChange">
+                                    Поменять
+                                    <input type="file" name="" id="inputAvatarChange">
+                                </label>
                             </div>
                             <div class="profile__avatar-message">
                                 <span class="profile__avatar-message-item">

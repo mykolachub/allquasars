@@ -89,8 +89,42 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // account avatar
+    let avatarImage = document.getElementById('avatarImage'),
+        avatarWrapper = document.getElementById('avatarWrapper'),
+        inputAvatarUpload = document.getElementById('inputAvatarUpload'),
+        avatarChangeWrapper = document.getElementById('avatarChangeWrapper'),
+        inputAvatarChange = document.getElementById('inputAvatarChange');
 
-    
+    function uploadAvatarImage(target) {
+        const file = target.files[0];
+
+        // если файл был выбран
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function (e) {
+
+                avatarImage.removeAttribute('src');
+
+                // удаление класса --unset у фотографии и загрузка аватара
+                avatarWrapper.classList.remove('profile__avatar-wrapper--unset');
+                avatarImage.setAttribute('src', this.result);
+
+                // удаление класса --disabled у кнопки поменять аватар
+                avatarChangeWrapper.classList.remove('profile__avatar-button--disabled');
+            });
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    inputAvatarUpload.addEventListener('change', function (e) {
+        uploadAvatarImage(inputAvatarUpload);
+    });
+
+    inputAvatarChange.addEventListener('change', function (e) {
+        uploadAvatarImage(inputAvatarChange);
+    });
 
     // gallery
     let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
