@@ -128,7 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // gallery
     let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
-        inputGallery = document.getElementById('inputGallery');
+        inputGallery = document.getElementById('inputGallery'),
+        galleryCounter = document.getElementById('galleryCounter'),
+        imageCounter;
 
     function removingGalleryImages() {
         let galleryDelete = document.querySelectorAll('.portfolio__gallery-delete');
@@ -136,9 +138,32 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryDelete.forEach(element => {
             element.addEventListener('click', function (e) {
                 this.parentNode.remove();
+                countOfGalleryImages();
             });
         });
+
     };
+
+    function countOfGalleryImages() {
+        let galleryItems = document.querySelectorAll(".portfolio__gallery-item").length - 1;
+        console.log('galleryItems: ', galleryItems);
+
+        if (galleryItems <= 10) {
+
+            galleryCounter.innerText = galleryItems;
+            galleryInputWrapper.classList.remove('portfolio__gallery-item--disabled');
+            galleryCounter.style.color = '#8b8b8b';   
+
+            if (galleryItems == 10) {
+
+                galleryCounter.style.color = 'red';   
+                galleryInputWrapper.classList.add('portfolio__gallery-item--disabled');
+
+            }
+        } else {
+            galleryCounter.style.color = '#8b8b8b';   
+        }
+    }
 
     function uploadGalleryImages(target) {
         const file = target.files[0];
@@ -146,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // если файл был выбран
         if (file) {
             const reader = new FileReader();
+            console.log(galleryWrapper);
 
             reader.addEventListener('load', function (e) {
 
@@ -153,7 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"> <img src="${this.result}" alt="image"> <span class="portfolio__gallery-delete"></span> </div>`);
 
                 // удаление изображений если нужно
-                removingGalleryImages()
+                removingGalleryImages();
+                countOfGalleryImages();
             });
 
             reader.readAsDataURL(file);
