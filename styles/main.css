@@ -847,5 +847,5 @@ html{
 /* footer */
 
 .footer{
- 
+    display: flex;
 }

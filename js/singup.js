@@ -1,8 +1,8 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
     console.log('welcome to my console');
-    
+
     // artist & employer
     let artistBtn = document.getElementById('artistBtn'),
         employerBtn = document.getElementById('employerBtn');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let popupWrapper = document.getElementById('popupWrapper'),
         popupClose = document.getElementById('popupClose');
 
-    artistBtn.addEventListener('click', ()=>{
+    artistBtn.addEventListener('click', () => {
         if (artistBtn.classList.contains("form__type-btn--clicked") == true) {
             console.log('ignored');
         } else {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     });
 
-    employerBtn.addEventListener('click', ()=>{
+    employerBtn.addEventListener('click', () => {
         if (employerBtn.classList.contains("form__type-btn--clicked") == true) {
             console.log('ignored');
         } else {
@@ -54,64 +54,64 @@ document.addEventListener('DOMContentLoaded', () =>{
     });
 
     //
-    inputName.addEventListener('focus', ()=>{
+    inputName.addEventListener('focus', () => {
         inputFocused(nameWrapper);
     });
 
-    inputName.addEventListener('blur', ()=>{
+    inputName.addEventListener('blur', () => {
         inputBlured(nameWrapper);
     });
 
     //
-    inputSurname.addEventListener('focus', ()=>{
+    inputSurname.addEventListener('focus', () => {
         inputFocused(surnameWrapper);
     });
 
-    inputSurname.addEventListener('blur', ()=>{
+    inputSurname.addEventListener('blur', () => {
         inputBlured(surnameWrapper);
     });
 
     //
-    inputDate.addEventListener('focus', ()=>{
+    inputDate.addEventListener('focus', () => {
         inputFocused(dateWrapper);
     });
 
-    inputDate.addEventListener('blur', ()=>{
+    inputDate.addEventListener('blur', () => {
         inputBlured(dateWrapper);
     });
 
     //
-    inputMail.addEventListener('focus', ()=>{
+    inputMail.addEventListener('focus', () => {
         inputFocused(mailWrapper);
     });
 
-    inputMail.addEventListener('blur', ()=>{
+    inputMail.addEventListener('blur', () => {
         inputBlured(mailWrapper);
     });
 
     //
-    inputPassword.addEventListener('focus', ()=>{
+    inputPassword.addEventListener('focus', () => {
         inputFocused(passwordWrapper);
     });
 
-    inputPassword.addEventListener('blur', ()=>{
+    inputPassword.addEventListener('blur', () => {
         inputBlured(passwordWrapper);
     });
 
     //
-    inputPassworCheck.addEventListener('focus', ()=>{
+    inputPassworCheck.addEventListener('focus', () => {
         inputFocused(passwordcheckWrapper);
     });
 
-    inputPassworCheck.addEventListener('blur', ()=>{
+    inputPassworCheck.addEventListener('blur', () => {
         inputBlured(passwordcheckWrapper);
     });
 
-    buttonSubmit.addEventListener('click', ()=>{
+    buttonSubmit.addEventListener('click', () => {
         popupWrapper.classList.add('popup-active');
     });
 
-    popupClose.addEventListener('click', ()=>{
+    popupClose.addEventListener('click', () => {
         popupWrapper.classList.remove('popup-active');
     });
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function inputBlured(e) {
         if (e.classList.contains('form__clue--clicked') && e.firstElementChild.value == '') {
-            e.classList.remove('form__clue--clicked'); 
+            e.classList.remove('form__clue--clicked');
             console.log('blured');
         }
         //console.log(e.firstElementChild.value);

@@ -1,12 +1,12 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
     console.log('welcome to my console');
 
     let profileAccount = document.getElementById('profileAccount'),
         profileAccountIcon = document.getElementById('profileAccountIcon');
 
-    profileAccount.addEventListener('click', ()=>{
+    profileAccount.addEventListener('click', () => {
         profileAccountIcon.classList.toggle("profile__nav-account-btn--clicked");
     });
 
@@ -36,33 +36,33 @@ document.addEventListener('DOMContentLoaded', () =>{
         inputMail = document.getElementById('inputMail');
 
     //
-    inputName.addEventListener('focus', ()=>{
+    inputName.addEventListener('focus', () => {
         inputFocused(nameWrapper);
     });
 
-    inputName.addEventListener('blur', ()=>{
+    inputName.addEventListener('blur', () => {
         inputBlured(nameWrapper);
     });
 
     //
-    inputSurname.addEventListener('focus', ()=>{
+    inputSurname.addEventListener('focus', () => {
         inputFocused(surnameWrapper);
     });
 
-    inputSurname.addEventListener('blur', ()=>{
+    inputSurname.addEventListener('blur', () => {
         inputBlured(surnameWrapper);
     });
 
     //
-    inputDate.addEventListener('focus', ()=>{
+    inputDate.addEventListener('focus', () => {
         inputFocused(dateWrapper);
     });
 
-    inputDate.addEventListener('blur', ()=>{
+    inputDate.addEventListener('blur', () => {
         inputBlured(dateWrapper);
     });
 
-    inputBio.addEventListener('input', ()=>{
+    inputBio.addEventListener('input', () => {
         BioCounter.innerText = inputBio.textLength;
     });
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function inputBlured(e) {
         if (e.classList.contains('form__clue--clicked') && e.firstElementChild.value == '') {
-            e.classList.remove('form__clue--clicked'); 
+            e.classList.remove('form__clue--clicked');
             console.log('blured');
         }
         //console.log(e.firstElementChild.value);
@@ -101,10 +101,10 @@ document.addEventListener('DOMContentLoaded', () =>{
             const reader = new FileReader();
 
             reader.addEventListener('load', function (e) {
- 
+
                 // создание картинки и добавление ее в поток
                 galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"><img src="${this.result}" alt="image"><span class="portfolio__gallery-delete"></span></div>`);
-                
+
                 // удаление изображений если нужно
                 removingImages()
             });
@@ -116,13 +116,13 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function removingImages() {
         let galleryDelete = document.querySelectorAll('.portfolio__gallery-delete');
-            
+
         galleryDelete.forEach(element => {
             element.addEventListener('click', function (e) {
-                this.parentNode.remove(); 
+                this.parentNode.remove();
             });
         });
     };
-    
-    
+
+
 });
