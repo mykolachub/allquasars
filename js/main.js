@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let inputBio = document.getElementById('inputBio'),
         BioCounter = document.getElementById("BioCounter");
 
-    // gallery
-    let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
-        inputGallery = document.getElementById('inputGallery');
-
     // mail
     let mailWrapper = document.getElementById('mailWrapper'),
         inputMail = document.getElementById('inputMail');
@@ -92,29 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log(e.firstElementChild.value);
     };
 
-    // получение и загрузка картинок в галерее
-    inputGallery.addEventListener('change', function (e) {
-        const file = this.files[0];
+    // account avatar
 
-        // если файл был выбран
-        if (file) {
-            const reader = new FileReader();
+    
 
-            reader.addEventListener('load', function (e) {
+    // gallery
+    let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
+        inputGallery = document.getElementById('inputGallery');
 
-                // создание картинки и добавление ее в поток
-                galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"><img src="${this.result}" alt="image"><span class="portfolio__gallery-delete"></span></div>`);
-
-                // удаление изображений если нужно
-                removingImages()
-            });
-
-            reader.readAsDataURL(file);
-        }
-
-    });
-
-    function removingImages() {
+    function removingGalleryImages() {
         let galleryDelete = document.querySelectorAll('.portfolio__gallery-delete');
 
         galleryDelete.forEach(element => {
@@ -124,5 +106,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    function uploadGalleryImages(target) {
+        const file = target.files[0];
+
+        // если файл был выбран
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function (e) {
+
+                // создание картинки и добавление ее в поток
+                galleryInputWrapper.insertAdjacentHTML('afterend', `<div class="portfolio__gallery-item"> <img src="${this.result}" alt="image"> <span class="portfolio__gallery-delete"></span> </div>`);
+
+                // удаление изображений если нужно
+                removingGalleryImages()
+            });
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // получение и загрузка картинок в галерее
+    inputGallery.addEventListener('change', function (e) {
+        uploadGalleryImages(inputGallery);
+    });
 
 });
