@@ -703,10 +703,13 @@ html {
 
 .portfolio__age-input {
     color: transparent;
+    padding-right: 1rem;
+    cursor: pointer;
 }
 
 .form__clue--clicked .portfolio__age-input {
     color: black !important;
+    cursor: pointer;
 }
 
 /* bio */
@@ -741,16 +744,21 @@ html {
 }
 
 .portfolio__gallery::-webkit-scrollbar {
-    background: #f4f6f6;
+    background: transparent;
     border-radius: 5px;
     height: 1rem;
     cursor: pointer;
+    transition: all 250ms ease;
 }
 
 .portfolio__gallery::-webkit-scrollbar-thumb {
-    background-color: #cdcccc;
+    background-color: #f1f1f1;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.portfolio__gallery:hover::-webkit-scrollbar-thumb {
+    background-color: #cdcccc;
 }
 
 
@@ -833,7 +841,7 @@ html {
     position: relative;
 }
 
-.portfolio__gallery-item--disabled{
+.portfolio__gallery-item--disabled {
     display: none;
 }
 
@@ -867,6 +875,54 @@ html {
 }
 
 /* settings */
+
+.portfolio__password {
+    padding-bottom: 2.75rem;
+    border-bottom: var(--border-setting-section);
+}
+
+/* danger zone */
+
+.portfolio__danger {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    border-radius: 5px;
+}
+
+.portfolio__danger-message {
+    display: block;
+    color: #8b8b8b;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+}
+
+.portfolio__danger-action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.portfolio__danger-btn {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    background-color: transparent;
+    transition: all 250ms ease;
+    border-radius: 5px;
+    border: var(--border-avatar-profile-button);
+    cursor: pointer;
+}
+
+.portfolio__danger:hover .portfolio__danger-btn{
+    border-color: #f63737;
+}
 
 /* main */
 
