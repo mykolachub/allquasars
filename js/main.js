@@ -3,12 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('welcome to my console');
 
-    let profileAccount = document.getElementById('profileAccount'),
-        profileAccountIcon = document.getElementById('profileAccountIcon');
-
-    profileAccount.addEventListener('click', () => {
-        profileAccountIcon.classList.toggle("profile__nav-account-btn--clicked");
-    });
+    // *
+    // * формы и все что с ними связано
+    // *
 
     // name & surname
     let nameWrapper = document.getElementById('nameWrapper'),
@@ -31,7 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let mailWrapper = document.getElementById('mailWrapper'),
         inputMail = document.getElementById('inputMail');
 
-    //
+    // nickname
+    let nicknameWrapper = document.getElementById('nicknameWrapper'),
+        inputNickname = document.getElementById('inputNickname');
+
+    // nickname
+    let passwordWrapper = document.getElementById('passwordWrapper'),
+        inputPassword = document.getElementById('inputPassword');
+
+    // nickname
+    let passwordcheckWrapper = document.getElementById('passwordcheckWrapper'),
+        inputPassworCheck = document.getElementById('inputPassworCheck');
+
+    // name
     inputName.addEventListener('focus', () => {
         inputFocused(nameWrapper);
     });
@@ -40,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputBlured(nameWrapper);
     });
 
-    //
+    // surname
     inputSurname.addEventListener('focus', () => {
         inputFocused(surnameWrapper);
     });
@@ -49,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputBlured(surnameWrapper);
     });
 
-    //
+    // data
     inputDate.addEventListener('focus', () => {
         inputFocused(dateWrapper);
     });
@@ -58,8 +67,45 @@ document.addEventListener('DOMContentLoaded', () => {
         inputBlured(dateWrapper);
     });
 
+    // text area for bio
     inputBio.addEventListener('input', () => {
         BioCounter.innerText = inputBio.textLength;
+    });
+
+    // mail
+    inputMail.addEventListener('focus', () => {
+        inputFocused(mailWrapper);
+    });
+
+    inputMail.addEventListener('blur', () => {
+        inputBlured(mailWrapper);
+    });
+
+    // nickname
+    inputNickname.addEventListener('focus', () => {
+        inputFocused(nicknameWrapper);
+    });
+
+    inputNickname.addEventListener('blur', () => {
+        inputBlured(nicknameWrapper);
+    });
+
+    // password
+    inputPassword.addEventListener('focus', () => {
+        inputFocused(passwordWrapper);
+    });
+
+    inputPassword.addEventListener('blur', () => {
+        inputBlured(passwordWrapper);
+    });
+
+    // password check
+    inputPassworCheck.addEventListener('focus', () => {
+        inputFocused(passwordcheckWrapper);
+    });
+
+    inputPassworCheck.addEventListener('blur', () => {
+        inputBlured(passwordcheckWrapper);
     });
 
     // вот этот бред нужен для инпутов с value
@@ -71,6 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
     inputFocused(surnameWrapper);
     inputFocused(dateWrapper);
     inputFocused(typeWrapper);
+    inputFocused(mailWrapper);
+    inputFocused(nicknameWrapper);
+    inputFocused(passwordWrapper);
 
     // main functions
     function inputFocused(e) {
@@ -88,7 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log(e.firstElementChild.value);
     };
 
-    // account avatar
+    // *
+    // * account avatar
+    // *
     let avatarImage = document.getElementById('avatarImage'),
         avatarWrapper = document.getElementById('avatarWrapper'),
         inputAvatarUpload = document.getElementById('inputAvatarUpload'),
@@ -126,7 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadAvatarImage(inputAvatarChange);
     });
 
-    // gallery
+    // *
+    // * gallery
+    // *
     let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
         inputGallery = document.getElementById('inputGallery'),
         galleryCounter = document.getElementById('galleryCounter'),
@@ -152,16 +205,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             galleryCounter.innerText = galleryItems;
             galleryInputWrapper.classList.remove('portfolio__gallery-item--disabled');
-            galleryCounter.style.color = '#8b8b8b';   
+            galleryCounter.style.color = '#8b8b8b';
 
             if (galleryItems == 10) {
 
-                galleryCounter.style.color = 'red';   
+                galleryCounter.style.color = 'red';
                 galleryInputWrapper.classList.add('portfolio__gallery-item--disabled');
 
             }
         } else {
-            galleryCounter.style.color = '#8b8b8b';   
+            galleryCounter.style.color = '#8b8b8b';
         }
     }
 

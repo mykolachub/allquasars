@@ -693,6 +693,7 @@ html {
     color: #378ff6;
     background: white;
     z-index: 2;
+    font-size: 1.4rem;
 }
 
 .portfolio__age {
@@ -743,11 +744,13 @@ html {
     background: #f4f6f6;
     border-radius: 5px;
     height: 1rem;
+    cursor: pointer;
 }
 
 .portfolio__gallery::-webkit-scrollbar-thumb {
     background-color: #cdcccc;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -777,7 +780,7 @@ html {
     cursor: pointer;
     background-color: #f4f6f6;
     border-radius: 5px;
-    background-image: url(../images/main/upload.svg);
+    background-image: url(../images/main/file.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -862,6 +865,8 @@ html {
 .portfolio__gallery-item:hover .portfolio__gallery-delete {
     opacity: 1;
 }
+
+/* settings */
 
 /* main */
 

@@ -76,10 +76,11 @@
                     </div>
                     <!-- все о пользователе -->
                     <div class="profile__settings">
+
+                        <!-- аватарка -->
                         <div class="profile__section-name">
                             <span class="profile__section-content">Ваша фотография</span>
                         </div>
-                        <!-- аватарка -->
                         <div class="profile__avatar">
                             <!-- если картинка стоит по умолчанию -> вкл класс --unset, 
                                  если пользователь загрузил фото -> класс --unset удаляется-->
@@ -111,6 +112,7 @@
                         <div class="profile__section-name">
                             <span class="profile__section-content">Персональные данные</span>
                         </div>
+
                         <!-- во все инпуты передай value то которое ввел пользователь при регистрации чтобы заново не вводить! -->
                         <!-- имя и фамилия -->
                         <div class="portfolio__form portfolio__form--grided portfolio__initials">
@@ -121,6 +123,7 @@
                                 <input id="inputSurname" class="portfolio__form-input" type="text" value="Чуб" autocomplete="off" />
                             </span>
                         </div>
+
                         <!-- др и тип пользователя -->
                         <div class="portfolio__form portfolio__form--grided portfolio__age">
                             <span id="dateWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Дата рождения">
@@ -134,6 +137,7 @@
                         <div class="profile__section-name">
                             <span class="profile__section-content">О вас</span>
                         </div>
+
                         <!-- о себе -->
                         <div class="portfolio__form portfolio__bio">
                             <span id="bioWrapper" class="portfolio__form-wrap portfolio__bio-wrap">
@@ -144,6 +148,7 @@
                                 <span class="portfolio__comment-text">/500 симв.</span>
                             </div>
                         </div>
+
                         <!-- галерея -->
                         <div class="profile__section-name">
                             <span class="profile__section-content">Галерея</span>
@@ -162,7 +167,30 @@
                         </div>
                         <div  class="portfolio__comment">
                             <span id="galleryCounter" class="portfolio__comment-text">0</span>
-                            <span class="portfolio__comment-text">/10 изобр.</span>
+                            <span class="portfolio__comment-text">/10 изобр. Размер изображения не должен превышать 1МБ.</span>
+                        </div>
+
+                        <!-- почта, никнейм -->
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Безопасность</span>
+                        </div>
+                        <div class="portfolio__form portfolio__form--grided portfolio__email">
+                            <span id="mailWrapper" class="portfolio__form-wrap portfolio__email-wrap form__clue" data-placeholder="Почта">
+                                <input id="inputMail" class="portfolio__form-input" value="mail@mail.com" type="email"/>
+                            </span>
+                            <span id="nicknameWrapper" class="portfolio__form-wrap portfolio__nickname-wrap form__clue" data-placeholder="Никнейм">
+                                <input id="inputNickname" class="portfolio__form-input" type="text" value="@customnickname" autocomplete="off" />
+                            </span>
+                        </div>
+
+                        <!-- пароль -->
+                        <div class="portfolio__form portfolio__form--grided portfolio__password">
+                            <span id="passwordWrapper" class="portfolio__form-wrap form__password-wrap form__clue" data-placeholder="Пароль">
+                                <input id="inputPassword" class="portfolio__form-input form__password-input" value="password" type="password"  autocomplete="off"/>
+                            </span>
+                            <span id="passwordcheckWrapper" class="portfolio__form-wrap form__password-wrap form__clue" data-placeholder="Подтверждение">
+                                <input id="inputPassworCheck" class="portfolio__form-input form__password-input" type="password"  autocomplete="off"/>
+                            </span>
                         </div>
                     </div>
                 </div>
