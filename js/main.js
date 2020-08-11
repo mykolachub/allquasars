@@ -7,145 +7,202 @@ document.addEventListener('DOMContentLoaded', () => {
     // * формы и все что с ними связано
     // *
 
-    // name & surname
-    let nameWrapper = document.getElementById('nameWrapper'),
-        inputName = document.getElementById('inputName'),
-        surnameWrapper = document.getElementById('surnameWrapper'),
-        inputSurname = document.getElementById('inputSurname');
-
-    // date
-    let dateWrapper = document.getElementById('dateWrapper'),
-        inputDate = document.getElementById('inputDate');
-
-    // mail
-    let typeWrapper = document.getElementById('typeWrapper');
-
-    // textarea
-    let inputBio = document.getElementById('inputBio'),
-        BioCounter = document.getElementById("BioCounter");
-
-    // mail
-    let mailWrapper = document.getElementById('mailWrapper'),
-        inputMail = document.getElementById('inputMail');
-
-    // nickname
-    let nicknameWrapper = document.getElementById('nicknameWrapper'),
-        inputNickname = document.getElementById('inputNickname');
-
-    // nickname
-    let passwordWrapper = document.getElementById('passwordWrapper'),
-        inputPassword = document.getElementById('inputPassword');
-
-    // nickname
-    let passwordcheckWrapper = document.getElementById('passwordcheckWrapper'),
-        inputPassworCheck = document.getElementById('inputPassworCheck');
+    // все инпуты
+    let inputItems = document.querySelectorAll('.portfolio__form-input');
 
     // name
-    inputName.addEventListener('focus', () => {
-        inputFocused(nameWrapper);
-    });
-
-    inputName.addEventListener('blur', () => {
-        inputBlured(nameWrapper);
-    });
+    let inputName = document.getElementById('inputName');
+    inputName.addEventListener('focus', inputFocused);
+    inputName.addEventListener('blur', inputBlured);
 
     // surname
-    inputSurname.addEventListener('focus', () => {
-        inputFocused(surnameWrapper);
-    });
-
-    inputSurname.addEventListener('blur', () => {
-        inputBlured(surnameWrapper);
-    });
+    let inputSurname = document.getElementById('inputSurname');
+    inputSurname.addEventListener('focus', inputFocused);
+    inputSurname.addEventListener('blur', inputBlured);
 
     // data
-    inputDate.addEventListener('focus', () => {
-        inputFocused(dateWrapper);
-    });
-
-    inputDate.addEventListener('blur', () => {
-        inputBlured(dateWrapper);
-    });
+    let inputDate = document.getElementById('inputDate');
+    inputDate.addEventListener('focus', inputFocused);
+    inputDate.addEventListener('blur', inputBlured);
 
     // text area for bio
+    let inputBio = document.getElementById('inputBio'),
+        BioCounter = document.getElementById("BioCounter");
     inputBio.addEventListener('input', () => {
         BioCounter.innerText = inputBio.textLength;
     });
 
-    // mail
-    inputMail.addEventListener('focus', () => {
-        inputFocused(mailWrapper);
-    });
+    // links
+    let inputSoundcloud = document.getElementById('inputSoundcloud'),
+        inputMixcloud = document.getElementById('inputMixcloud'),
+        inputYoutube = document.getElementById('inputYoutube'),
+        inputVimeo = document.getElementById('inputVimeo'),
+        inputBeatport = document.getElementById('inputBeatport'),
+        inputiTunes = document.getElementById('inputiTunes'),
+        inputAppleMusic = document.getElementById('inputAppleMusic'),
+        inputSpotify = document.getElementById('inputSpotify');
 
-    inputMail.addEventListener('blur', () => {
-        inputBlured(mailWrapper);
-    });
+    inputSoundcloud.addEventListener('focus', inputFocused);
+    inputSoundcloud.addEventListener('blur', inputBlured);
+
+    inputMixcloud.addEventListener('focus', inputFocused);
+    inputMixcloud.addEventListener('blur', inputBlured);
+
+    inputYoutube.addEventListener('focus', inputFocused);
+    inputYoutube.addEventListener('blur', inputBlured);
+
+    inputVimeo.addEventListener('focus', inputFocused);
+    inputVimeo.addEventListener('blur', inputBlured);
+
+    inputBeatport.addEventListener('focus', inputFocused);
+    inputBeatport.addEventListener('blur', inputBlured);
+
+    inputiTunes.addEventListener('focus', inputFocused);
+    inputiTunes.addEventListener('blur', inputBlured);
+
+    inputAppleMusic.addEventListener('focus', inputFocused);
+    inputAppleMusic.addEventListener('blur', inputBlured);
+
+    inputSpotify.addEventListener('focus', inputFocused);
+    inputSpotify.addEventListener('blur', inputBlured);
+
+    // mail
+    let inputMail = document.getElementById('inputMail');
+    inputMail.addEventListener('focus', inputFocused);
+    inputMail.addEventListener('blur', inputBlured);
 
     // nickname
-    inputNickname.addEventListener('focus', () => {
-        inputFocused(nicknameWrapper);
-    });
-
-    inputNickname.addEventListener('blur', () => {
-        inputBlured(nicknameWrapper);
-    });
+    let inputNickname = document.getElementById('inputNickname');
+    inputNickname.addEventListener('focus', inputFocused);
+    inputNickname.addEventListener('blur', inputBlured);
 
     // password
-    inputPassword.addEventListener('focus', () => {
-        inputFocused(passwordWrapper);
-    });
-
-    inputPassword.addEventListener('blur', () => {
-        inputBlured(passwordWrapper);
-    });
+    let inputPassword = document.getElementById('inputPassword');
+    inputPassword.addEventListener('focus', inputFocused);
+    inputPassword.addEventListener('blur', inputBlured);
 
     // password check
-    inputPassworCheck.addEventListener('focus', () => {
-        inputFocused(passwordcheckWrapper);
-    });
+    let inputPassworCheck = document.getElementById('inputPassworCheck');
+    inputPassworCheck.addEventListener('focus', inputFocused);
+    inputPassworCheck.addEventListener('blur', inputBlured);
 
-    inputPassworCheck.addEventListener('blur', () => {
-        inputBlured(passwordcheckWrapper);
-    });
+    // *
+    // * main functions
+    // *
 
     // вот этот бред нужен для инпутов с value
     // иначе подсказка наезжает на текст
     // попробуй убрать то что ниже и поймешь о чем я;
     // я "включил" сразу те инпуты что были в регистрации
     // новые будет как и раньше. 
-    inputFocused(nameWrapper);
-    inputFocused(surnameWrapper);
-    inputFocused(dateWrapper);
-    inputFocused(typeWrapper);
-    inputFocused(mailWrapper);
-    inputFocused(nicknameWrapper);
-    inputFocused(passwordWrapper);
+    function filledInputFoused() {
+        inputItems.forEach(element => {
+            let eP = element.parentNode;
+            if (element.value) {
+                eP.classList.add('form__clue--clicked');
+            } else{
+                eP.classList.remove('form__clue--clicked');
+            }
+        });   
+    }
 
-    // main functions
-    function inputFocused(e) {
-        if (!e.classList.contains('form__clue--clicked')) {
-            e.classList.add('form__clue--clicked');
-            console.log('focused');
+    // разноцветные инпуты при фокусе и блюре
+    function colouredInputs() {
+
+        // херачу масив
+        inputItems.forEach(element => {
+            let eP = element.parentNode;
+            
+            // если у инпута есть дата атрибут
+            if (eP.hasAttribute('data-placeholder')) {
+                let eAttr = eP.getAttribute('data-placeholder');
+    
+                // дает соответствующий класс
+                function colouredInputsOnAction() {
+                    element.addEventListener('focus', function () {
+                        let eClassName = eAttr.replace(" ", "").toLowerCase();
+                        let eClass = 'form__clue--'+ eClassName;
+                        eP.classList.add(eClass);                    
+                    })
+            
+                    element.addEventListener('blur', function () {
+                        let eClassName = eAttr.replace(" ", "").toLowerCase();
+                        let eClass = 'form__clue--'+ eClassName;
+                        eP.classList.remove(eClass);                    
+                    })
+                }
+    
+                // ищем совпадения
+                switch (eAttr) {
+                    case 'Soundcloud':
+                        colouredInputsOnAction();
+                        break;
+    
+                    case 'Mixcloud':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'Youtube':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'Vimeo':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'Beatport':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'iTunes':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'Apple Music':
+                        colouredInputsOnAction();
+                        break;
+
+                    case 'Spotify':
+                        colouredInputsOnAction();
+                        break;
+                
+                    default:
+                        break;
+                }
+            } 
+        });
+    }
+
+    function inputFocused() {
+        let eP = this.parentNode;
+        if (!eP.classList.contains('form__clue--clicked')) {
+            eP.classList.add('form__clue--clicked');
+            //console.log('focused');
         }
     };
 
-    function inputBlured(e) {
-        if (e.classList.contains('form__clue--clicked') && e.firstElementChild.value == '') {
-            e.classList.remove('form__clue--clicked');
-            console.log('blured');
+    function inputBlured() {
+        let eP = this.parentNode;
+        let eV = this.value;
+        if (eP.classList.contains('form__clue--clicked') && eV == '') {
+            eP.classList.remove('form__clue--clicked');
+            //console.log('blured');
         }
-        //console.log(e.firstElementChild.value);
     };
+
+    filledInputFoused();
+    colouredInputs();
 
     // *
     // * account avatar
     // *
+    
     let avatarImage = document.getElementById('avatarImage'),
         avatarWrapper = document.getElementById('avatarWrapper'),
         inputAvatarUpload = document.getElementById('inputAvatarUpload'),
         avatarChangeWrapper = document.getElementById('avatarChangeWrapper'),
         inputAvatarChange = document.getElementById('inputAvatarChange');
-
+    
     function uploadAvatarImage(target) {
         const file = target.files[0];
 
@@ -180,10 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // *
     // * gallery
     // *
+
     let galleryInputWrapper = document.getElementById('galleryInputWrapper'),
         inputGallery = document.getElementById('inputGallery'),
-        galleryCounter = document.getElementById('galleryCounter'),
-        imageCounter;
+        galleryCounter = document.getElementById('galleryCounter');
 
     function removingGalleryImages() {
         let galleryDelete = document.querySelectorAll('.portfolio__gallery-delete');

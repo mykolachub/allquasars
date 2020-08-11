@@ -696,6 +696,78 @@ html {
     font-size: 1.4rem;
 }
 
+/* цвет для soundcloud */
+.form__clue--soundcloud::after{
+    color: #fe8c00;
+}
+
+.form__clue--soundcloud .portfolio__form-input:focus {
+    border: 2px solid #fe8c00;
+}
+
+/* цвет для mixcloud */
+.form__clue--mixcloud::after{
+    color: #f3b2a6;
+}
+
+.form__clue--mixcloud .portfolio__form-input:focus {
+    border: 2px solid #f3b2a6;
+}
+
+/* цвет для Youtube */
+.form__clue--youtube::after{
+    color: #e52d27;
+}
+
+.form__clue--youtube .portfolio__form-input:focus {
+    border: 2px solid #e52d27;
+}
+
+/* цвет для vimeo */
+.form__clue--vimeo::after{
+    color: #00adef;
+}
+
+.form__clue--vimeo .portfolio__form-input:focus {
+    border: 2px solid #00adef;
+}
+
+/* цвет для beatport */
+.form__clue--beatport::after{
+    color: #94d500;
+}
+
+.form__clue--beatport .portfolio__form-input:focus {
+    border: 2px solid #94d500;
+}
+
+/* цвет для itunes */
+.form__clue--itunes::after{
+    color: #ff375f;
+}
+
+.form__clue--itunes .portfolio__form-input:focus {
+    border: 2px solid #ff375f;
+}
+
+/* цвет для applemusic */
+.form__clue--applemusic::after{
+    color: #bf5af2;
+}
+
+.form__clue--applemusic .portfolio__form-input:focus {
+    border: 2px solid #bf5af2;
+}
+
+/* цвет для spotify */
+.form__clue--spotify::after{
+    color: #1ed760;
+}
+
+.form__clue--spotify .portfolio__form-input:focus {
+    border: 2px solid #1ed760;
+}
+
 .portfolio__age {
     border-bottom: var(--border-setting-section);
     padding-bottom: 2.75rem;
@@ -731,6 +803,11 @@ html {
     font-size: 1.6rem;
     color: #8b8b8b;
     font-family: var(--font-eUkrLGH);
+}
+
+.portfolio__comment-gallery{
+    padding-bottom: 2.75rem;
+    border-bottom: var(--border-setting-section);
 }
 
 /* gallery */
@@ -872,6 +949,17 @@ html {
 
 .portfolio__gallery-item:hover .portfolio__gallery-delete {
     opacity: 1;
+}
+
+/* link */
+
+.portfolio__link{
+    padding-bottom: 2.75rem;
+    border-bottom: var(--border-setting-section);
+}
+
+.portfolio__link-wrap{
+    margin-bottom: 2rem;
 }
 
 /* settings */
