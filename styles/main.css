@@ -962,6 +962,107 @@ html {
     margin-bottom: 2rem;
 }
 
+/* filter */
+
+.portfolio__filter{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    padding-bottom: 2.75rem;
+    border-bottom: var(--border-setting-section);
+}
+
+.portfolio__filter-section{
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    border-left: var(--border-setting-section);
+}
+
+.portfolio__filter-section--last{
+    margin: 0;
+    padding-bottom: 0;
+    border: none;
+    position: relative;
+}
+
+.portfolio__filter-section--last::before{
+    width: 2px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    border-left: var(--border-setting-section);
+}
+
+.portfolio__filter-headering{
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: -2rem;
+    position: relative;
+}
+
+.portfolio__filter-headering::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.25rem;
+    height: calc(50% + 0.1rem);
+    border-bottom: var(--border-setting-section);
+    border-radius: 0 0 0 5px;
+}
+
+.portfolio__filter-label{
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+}
+
+.portfolio__filter-option{
+    display: inline-block;
+}
+
+.portfolio__filter-item{
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: var(--border-avatar-profile-button);
+    display: inline-block;
+    transition: all 250ms ease;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 2px solid #f4f6f6;
+    background-color: #f4f6f6;
+}
+
+.portfolio__filter-item:hover{
+    border-color: #378ff6;
+}
+
+.portfolio__filter-text{
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+}
+
+.portfolio__filter--selected{
+    border: 2px solid #f4f6f6;
+    background-color: #f4f6f6;
+}
+
+.portfolio__filter--selected:hover{
+    border-color: #f4f6f6;
+}
+
+.portfolio__filter--selected .portfolio__filter-text{
+    color: #378ff6;
+}
+
+
 /* settings */
 
 .portfolio__password {

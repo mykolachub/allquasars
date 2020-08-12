@@ -302,4 +302,23 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadGalleryImages(inputGallery);
     });
 
+    // *
+    // * ФИЛЬТРЫ
+    // *
+
+    // выбираю элементы
+    let filterItems = document.querySelectorAll('.portfolio__filter-item');
+
+    filterItems.forEach(element => {
+        element.addEventListener('click', function () {
+            if (this.classList.contains('portfolio__filter-item--all')) {
+                
+
+            } else{
+                // включаю все кроме кнопки выбрать все
+                this.classList.toggle('portfolio__filter--selected'); 
+            };
+        });
+    });
+
 });
