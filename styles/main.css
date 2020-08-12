@@ -585,6 +585,8 @@ html {
 
 .profile__avatar-button-upload {
     margin-right: 2rem;
+    background-color: #f4f6f6;
+    border-color: #f4f6f6;
 }
 
 .profile__avatar-button--disabled:hover {
@@ -1035,7 +1037,8 @@ html {
     margin-right: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    
+    border: 2px solid #f4f6f6;
+    background-color: #f4f6f6;
 }
 
 .portfolio__filter-item:hover{
@@ -1070,8 +1073,10 @@ html {
 }
 
 /* danger zone */
+/* submit */
 
-.portfolio__danger {
+.portfolio__danger,
+.profile__submit {
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
@@ -1081,20 +1086,27 @@ html {
     border-radius: 5px;
 }
 
-.portfolio__danger-message {
+.profile__submit{
+    margin: 0;
+}
+
+.portfolio__danger-message,
+.profile__submit-message {
     display: block;
     color: #8b8b8b;
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
 }
 
-.portfolio__danger-action {
+.portfolio__danger-action,
+.profile__submit-action {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.portfolio__danger-btn {
+.portfolio__danger-btn,
+.profile__submit-btn {
     display: inline-block;
     width: auto;
     height: auto;
@@ -1108,8 +1120,17 @@ html {
     cursor: pointer;
 }
 
-.portfolio__danger:hover .portfolio__danger-btn{
+.profile__submit-btn{
+    background-color: #f4f6f6;
+    border-color: #f4f6f6;
+}
+
+.portfolio__danger-btn:hover{
     border-color: #f63737;
+}
+
+.profile__submit-btn:hover{
+    border-color: #378ff6;
 }
 
 /* main */
