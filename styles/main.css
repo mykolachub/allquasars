@@ -1035,8 +1035,7 @@ html {
     margin-right: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    border: 2px solid #f4f6f6;
-    background-color: #f4f6f6;
+    
 }
 
 .portfolio__filter-item:hover{
