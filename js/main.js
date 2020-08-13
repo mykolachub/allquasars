@@ -321,4 +321,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // *
+    // * очистить поиск
+    // *
+
+    let inputSearch = document.getElementById('inputSearch'),
+        searchClear = document.getElementById('searchClear');
+
+    searchClear.addEventListener('click', function () {
+        if (inputSearch.value) {
+            inputSearch.value = '';
+        } else {
+            console.log('nothing inputed');
+        }
+    })
+
+
 });

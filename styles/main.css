@@ -246,6 +246,7 @@ html {
     padding: 2.75rem;
     border-radius: 5px;
     background-color: white;
+    box-shadow: var(--shadow-block);
 }
 
 .profile__nav-account {
@@ -358,28 +359,53 @@ html {
     padding-bottom: 0;
 }
 
-.profile__nav-btn {
+.profile__nav-item-first{
+    margin-bottom: 1rem;
+}
+
+.profile__nav-btn{
     width: 100%;
-    height: 52px;
-    font-size: 1.6rem;
-    font-family: var(--font-eUkrLGH);
-    color: black;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
     border: 0;
     border-radius: 5px;
     background-color: transparent;
-    text-align: start;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    padding-left: 5rem;
+    text-align: left;
+    background-color: #f4f6f6;
+    border: 2px solid #f4f6f6;
+    display: flex;
+    align-items: center;
 }
 
+.profile__nav-icon,
+.profile__nav-icon{
+    display: inline-block;
+}
 
+.profile__nav-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
 
-.profile__nav-btn::before {
+.profile__nav-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile__nav-btn-item{
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    color: black;
+    padding: 1rem 2rem 1rem 1rem;
+    transition: all 250ms ease;
+}
+
+.profile__nav-btn:hover .profile__nav-btn-item{
+    color: #378ff6;
+}
+
+/*.profile__nav-btn::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -408,14 +434,14 @@ html {
 }
 
 .profile__nav-btn-help::before {
-    background-image: url(../images/main/help.svg);
+    background-image: url(../images/main/info.svg);
 }
 
 .profile__nav-btn:hover,
 .profile__nav-btn--active {
     color: #378ff6;
     background-color: #f4f6f6;
-}
+}*/
 
 .profile__nav-a {
     width: 100%;
@@ -453,6 +479,7 @@ html {
     background-color: white;
     border-radius: 5px;
     padding: 2.75rem;
+    box-shadow: var(--shadow-block);
 }
 
 /* section name */
@@ -573,8 +600,7 @@ html {
 }
 
 .profile__avatar-button-item:hover {
-    border: var(--border-avatar-profile-button-hover);
-    /*color: var(--color-avatar-profile-button-hover);*/
+    color: #378ff6;
 }
 
 .profile__avatar-button--disabled {
@@ -1130,14 +1156,122 @@ html {
 }
 
 .profile__submit-btn:hover{
-    border-color: #378ff6;
+    color: #378ff6;
 }
 
 /* main */
 
 .main {
     width: 100%;
+    height: 100%;
+}
+
+.main__content{
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2.75rem;
     min-height: 100vh;
+}
+
+.main__search,
+.main__sidebar{
+    width: 100%;
+    height: 100%;
+}
+
+/* search */
+
+.search{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-column-gap: 2rem;
+    padding: 2rem 2.75rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: white;
+    box-shadow: var(--shadow-block);
+}
+
+.search__input{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.search__input::before{
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    background-image: url(../images/main/search.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search__input-item{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    background-color: #f4f6f6;
+    padding: 1rem 2rem 1rem 4.2rem;
+    border-radius: 5px;
+    border: 2px solid #f4f6f6;
+    display: inline-block;
+}
+
+.search__btn{
+    width: auto;
+    height: auto;
+    background-color: #f4f6f6;
+    border-radius: 5px;
+    border: 2px solid #f4f6f6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.search__btn:hover{
+    color: #378ff6;
+}
+
+.search__icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.search__icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.search__text{
+    display: inline-block;
+    padding: 1rem 2rem 1rem 1rem;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+}
+
+/* result */
+
+.result{
+    width: 100%;
+    height: 100%;
     background-color: white;
 }
 

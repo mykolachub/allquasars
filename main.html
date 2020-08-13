@@ -63,9 +63,36 @@
                                 </div>
                             </div>
                             <ul class="profile__nav-list">
-                                <li class="profile__nav-item"><button class="profile__nav-btn profile__nav-btn-profile profile__nav-btn--active">Профиль</button></li>
-                                <li class="profile__nav-item"><button class="profile__nav-btn profile__nav-btn-lock">Безопасность</button></li>
-                                <li class="profile__nav-item"><button class="profile__nav-btn profile__nav-btn-help">Поддержка</button></li>
+                                <li class="profile__nav-item-first profile__nav-item">
+                                    <button class="profile__nav-btn profile__nav-btn-profile">
+                                        <span class="profile__nav-icon">
+                                            <img src="images/main/user.svg" alt="user">
+                                        </span>
+                                        <span class="profile__nav-btn-item">
+                                            Профиль
+                                        </span>     
+                                    </button>
+                                </li>
+                                <li class="profile__nav-item-first profile__nav-item">
+                                    <button class="profile__nav-btn profile__nav-btn-profile">
+                                        <span class="profile__nav-icon">
+                                            <img src="images/main/lock.svg" alt="user">
+                                        </span>
+                                        <span class="profile__nav-btn-item">
+                                            Безопасность
+                                        </span>     
+                                    </button>
+                                </li>
+                                <li class="profile__nav-item-first profile__nav-item">
+                                    <button class="profile__nav-btn profile__nav-btn-profile">
+                                        <span class="profile__nav-icon">
+                                            <img src="images/main/info.svg" alt="user">
+                                        </span>
+                                        <span class="profile__nav-btn-item">
+                                            Поддержка
+                                        </span>     
+                                    </button>
+                                </li>
                             </ul>
                             <ul class="profile__nav-list profile__nav-list-support">
                                 <li class="profile__nav-item"><a class="profile__nav-a" href="#">Частые вопросы</a></li>
@@ -457,9 +484,29 @@
             <!-- MAIN -->
             <main class="main">
                 <div class="main__content">
-                    <div class="main__search"></div>
-                    <div class="main__profile"></div>
-                    <div class="main__result"></div>
+                    <div class="main__search">
+                        <div class="search">
+                            <span class="search__input">
+                                <input id="inputSearch" class="search__input-item" placeholder="Поиск людей" type="search" name="" id="">
+                            </span>
+                            <button id="searchClear" class="search__btn search__clear">
+                                <span class="search__icon">
+                                    <img src="images/main/close.svg" alt="clear">
+                                </span>
+                                <span class="search__text">Очистить</span>
+                            </button>
+                            <button class="search__btn search__filter">
+                                <span class="search__icon">
+                                    <img src="images/main/filter.svg" alt="filter">
+                                </span>
+                                <span class="search__text">Фильтры</span>
+                            </button>
+                        </div>
+                        <div class="result">
+
+                        </div>
+                    </div>
+                    <div class="main__sidebar"></div>
                 </div>
             </main>
             <!--END OF MAIN -->
