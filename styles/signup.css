@@ -34,7 +34,10 @@ html {
     height: 100%;
     min-height: 100vh;
     position: relative;
-    background: #f5f6fa;
+    background: #f4f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* popup */
@@ -112,42 +115,12 @@ html {
     cursor: pointer;
 }
 
-/* wave*/
-
-.page__wave {
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-}
-
-.page__wave-top {
-    top: 0;
-}
-
-.page__wave-bottom {
-    bottom: 0;
-}
-
-.page__wave svg {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    display: block;
-}
-
 /* form */
 
 .form {
     max-width: 50rem;
     width: calc(100% - 4rem);
     height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
@@ -167,7 +140,7 @@ html {
 .form {
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     padding: 4rem 3rem;
 }
 
@@ -189,7 +162,7 @@ html {
 }
 
 .form__headering-a:focus {
-    border-bottom: 2px solid #37f644;
+    border-bottom: 2px solid #378ff6;
 }
 
 /* form__type */
@@ -206,7 +179,7 @@ html {
     font-family: var(--font-eUkrLGH);
     height: 50px;
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid #cdcccc;
     transition: all 250ms ease;
     background: white;
     cursor: pointer;
@@ -218,22 +191,18 @@ html {
 
 .form__type-btn:hover {
     border: 2px solid #378ff6;
-    color: #378ff6;
 }
 
 .form__type-btn--clicked {
-    border: 2px solid #378ff6;
-    background: #378ff6;
-    color: white;
+    border: 2px solid #f4f6f6;
+    background: #f4f6f6;
+    color: #378ff6;
 }
 
 .form__type-btn--clicked:focus {
-    border: 3px solid #37f644;
+    border: 2px solid #378ff6;
 }
 
-.form__type-btn--clicked:hover {
-    color: white;
-}
 
 .form__type-btn:first-of-type {
     margin-right: 1rem;
@@ -316,6 +285,7 @@ html {
     color: #378ff6;
     background: white;
     z-index: 2;
+    font-size: 1.4rem;
 }
 
 .form__clue--clicked .form__age-input {
@@ -331,7 +301,7 @@ html {
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid #cdcccc;
     transition: all 250ms ease;
     cursor: pointer;
     padding-left: 1rem;
@@ -432,7 +402,7 @@ html {
 }
 
 .form__term-a:focus {
-    border-bottom: 2px solid #37f644;
+    border-bottom: 2px solid #378ff6;
 }
 
 /* submit */
@@ -451,14 +421,13 @@ html {
     display: inline-block;
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
-    color: #378ff6;
+    color: black;
     text-decoration: none;
-    text-shadow: 0 6px 12px rgba(55, 143, 246, 0.25);
     padding: .5rem;
 }
 
 .from__submit-a:focus {
-    border: 2px solid #37f644;
+    border: 2px solid #378ff6;
     border-radius: 5px;
 }
 
@@ -469,17 +438,17 @@ html {
     font-family: var(--font-eUkrLGH);
     border-radius: 5px;
     cursor: pointer;
-    border: 2px solid #378ff6;
-    background: #378ff6;
-    color: white;
-    box-shadow: 0 6px 12px rgba(55, 143, 246, 0.25);
+    border: 2px solid #f4f6f6;
+    background: #f4f6f6;
+    color: black;
+    /*box-shadow: 0 6px 12px rgba(55, 143, 246, 0.25);*/
     transition: all 250ms ease;
 }
 
 .from__submit-btn:focus {
-    border: 3px solid #37f644;
+    border: 2px solid #378ff6;
 }
 
 .from__submit-btn:hover {
-    box-shadow: none;
+    color: #378ff6;
 }
