@@ -303,26 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // *
-    // * ФИЛЬТРЫ
-    // *
-
-    // выбираю элементы
-    let filterItems = document.querySelectorAll('.portfolio__filter-item');
-
-    filterItems.forEach(element => {
-        element.addEventListener('click', function () {
-            if (this.classList.contains('portfolio__filter-item--all')) {
-                
-
-            } else{
-                // включаю все кроме кнопки выбрать все
-                this.classList.toggle('portfolio__filter--selected'); 
-            };
-        });
-    });
-
-
-    // *
     // * очистить поиск
     // *
 
@@ -337,5 +317,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    // *
+    // * ФИЛЬТРЫ
+    // *
+
+    // выбираю элементы
+    let filterBtn = document.getElementById('filterBtn'),
+        filterItems = document.querySelectorAll('.search__filter-item'),
+        filterWrapper = document.getElementById('filterWrapper');
+
+    filterBtn.addEventListener('click', function () {
+        filterWrapper.classList.toggle('search__filter--closed');
+    });
+
+    filterItems.forEach(element => {
+        element.addEventListener('click', function () {
+            if (this.classList.contains('search__filter-item--all')) {
+                
+
+            } else{
+                // включаю все кроме кнопки выбрать все
+                this.classList.toggle('search__filter--selected'); 
+            };
+        });
+    });
 
 });
