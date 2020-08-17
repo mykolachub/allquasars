@@ -235,6 +235,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // *
+    // * ФИЛЬТРЫ для пользователя
+    // *
+
+    // выбираю элементы
+    let portfolioFilterItems = document.querySelectorAll('.portfolio__filter-item');
+
+    portfolioFilterItems.forEach(element => {
+        element.addEventListener('click', function () {
+            if (this.classList.contains('portfolio__filter-item--all')) {
+                
+
+            } else{
+                // включаю все кроме кнопки выбрать все
+                this.classList.toggle('portfolio__filter--selected'); 
+            };
+        });
+    });
+
+    // *
     // * gallery
     // *
 
@@ -318,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // *
-    // * ФИЛЬТРЫ
+    // * ФИЛЬТРЫ в поиске
     // *
 
     // выбираю элементы

@@ -161,78 +161,12 @@
                                 <input id="inputType" class="portfolio__form-input portfolio__type-input" type="text" value="Заказчик" autocomplete="off" tabindex="-1" />
                             </span>
                         </div>
-                        <div class="profile__section-name">
-                            <span class="profile__section-content">О вас</span>
-                        </div>
-
-                        <!-- о себе -->
-                        <div class="portfolio__form portfolio__bio">
-                            <span id="bioWrapper" class="portfolio__form-wrap portfolio__bio-wrap">
-                                <textarea id="inputBio" class="portfolio__form-input portfolio__bio-input" maxlength="500" placeholder="Расскажите немного о себе"></textarea>
-                            </span>
-                            <div class="portfolio__comment">
-                                <span id="BioCounter" class="portfolio__comment-text">0</span>
-                                <span class="portfolio__comment-text">/500 симв.</span>
-                            </div>
-                        </div>
-
-                        <!-- галерея -->
-                        <div class="profile__section-name">
-                            <span class="profile__section-content">Галерея</span>
-                        </div>
-                        <div class="portfolio__form portfolio__gallery">
-                            <div id="galleryWrapper" class="portfolio__gallery-content">
-                                <div id="galleryInputWrapper" class="portfolio__gallery-item">
-                                    <div class="portfolio__gallery-input-wrapp">
-                                        <label for="inputGallery" class="portfolio__gallery-input">
-                                            <input type="file" id="inputGallery">
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- здесь будут изображения -->
-                            </div>
-                        </div>
-                        <div class="portfolio__comment portfolio__comment-gallery">
-                            <span id="galleryCounter" class="portfolio__comment-text">0</span>
-                            <span class="portfolio__comment-text">/10 изобр. Размер изображения не должен превышать 1МБ.</span>
-                        </div>
-
-                        <!-- ссылки -->
-                        <div class="profile__section-name">
-                            <span class="profile__section-content">Ссылки</span>
-                        </div>
-                        <div class="portfolio__form portfolio__form--grided portfolio__link">
-                            <span id="soundcloudWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Soundcloud">
-                                <input id="inputSoundcloud" class="portfolio__form-input" type="text"/>
-                            </span>
-                            <span id="spotifyWrapper" class="portfolio__form-wrap form__clue" data-placeholder="Spotify">
-                                <input id="inputSpotify" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="itunesWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="iTunes">
-                                <input id="inputiTunes" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="appleMusicWrapper" class="portfolio__form-wrap form__clue" data-placeholder="Apple Music">
-                                <input id="inputAppleMusic" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="youtubeWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="YouTube">
-                                <input id="inputYoutube" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="vimeoWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Vimeo">
-                                <input id="inputVimeo" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="beatportWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Beatport">
-                                <input id="inputBeatport" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                            <span id="mixcloudWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Mixcloud">
-                                <input id="inputMixcloud" class="portfolio__form-input" type="text" autocomplete="off" />
-                            </span>
-                        </div>
 
                         <!-- фильтры -->
                         <div class="profile__section-name">
-                            <span class="profile__section-content">Фильры</span>
+                            <span class="profile__section-content">Подробная информация</span>
                             <div class="portfolio__comment">
-                                <span class="portfolio__comment-text">Указанные фильтры влияют на результаты поиска.</span>
+                                <span class="portfolio__comment-text">Указанные фильтры влияют на результаты поиска других пользователей.</span>
                             </div>
                         </div>
                         <div class="portfolio__filter">
@@ -241,7 +175,7 @@
                                 <div class="portfolio__filter-option portfolio__filter-option-type">
                                     <div class="portfolio__filter-headering">
                                         <span class="portfolio__filter-label">
-                                            Тип
+                                            Профессия
                                         </span>
                                     </div>
                                     <!-- если фильтр включен к элементу добавляешь класс portfolio__filter--selected -->
@@ -310,7 +244,8 @@
                             </div>
 
                             <!-- рост -->
-                            <div class="portfolio__filter-height portfolio__filter-section">
+                            <!-- я думаю ты понимаешь что здесь выбрать сразу несклько вариантов это полный бред -->
+                            <div class="portfolio__filter-height portfolio__filter-section portfolio__filter-section--last">
                                 <div class="portfolio__filter-option">
                                     <div class="portfolio__filter-headering">
                                         <span class="portfolio__filter-label">
@@ -352,83 +287,82 @@
                                             Более 200 см
                                         </span>
                                     </div>
-                                    <div class="portfolio__filter-item portfolio__filter-item--all">
-                                        <span class="portfolio__filter-text">
-                                            Все
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- возраст -->
-                            <div class="portfolio__filter-age portfolio__filter-section portfolio__filter-section--last">
-                                <div class="portfolio__filter-option">
-                                    <div class="portfolio__filter-headering">
-                                        <span class="portfolio__filter-label">
-                                            Возраст
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter--selected portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            Менее 18
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            18-23
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            24-28
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            29-33
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            34-38
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            39-43
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            44-48
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            49-53
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            54-58
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            59-63
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item">
-                                        <span class="portfolio__filter-text">
-                                            59-63
-                                        </span>
-                                    </div>
-                                    <div class="portfolio__filter-item portfolio__filter-item--all">
-                                        <span class="portfolio__filter-text">
-                                            Все
-                                        </span>
+                        <!-- о себе -->
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">О вас</span>
+                        </div>
+                        
+                        <div class="portfolio__form portfolio__bio">
+                            <span id="bioWrapper" class="portfolio__form-wrap portfolio__bio-wrap">
+                                <textarea id="inputBio" class="portfolio__form-input portfolio__bio-input" maxlength="500" placeholder="Расскажите немного о себе"></textarea>
+                            </span>
+                            <div class="portfolio__comment">
+                                <span id="BioCounter" class="portfolio__comment-text">0</span>
+                                <span class="portfolio__comment-text">/500 симв.</span>
+                            </div>
+                        </div>
+
+                        <!-- галерея -->
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Галерея</span>
+                        </div>
+                        <div class="portfolio__form portfolio__gallery">
+                            <div id="galleryWrapper" class="portfolio__gallery-content">
+                                <div id="galleryInputWrapper" class="portfolio__gallery-item">
+                                    <div class="portfolio__gallery-input-wrapp">
+                                        <label for="inputGallery" class="portfolio__gallery-input">
+                                            <input type="file" id="inputGallery">
+                                        </label>
                                     </div>
                                 </div>
+                                <!-- здесь будут изображения -->
+                            </div>
+                        </div>
+                        <div class="portfolio__comment portfolio__comment-gallery">
+                            <span id="galleryCounter" class="portfolio__comment-text">0</span>
+                            <span class="portfolio__comment-text">/10 изобр. Размер изображения не должен превышать 1МБ.</span>
+                        </div>
+
+                        <!-- ссылки -->
+                        <div class="profile__section-name">
+                            <span class="profile__section-content">Ссылки</span>
+                        </div>
+                        <div class="portfolio__form portfolio__form--grided portfolio__link">
+                            <span id="soundcloudWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Soundcloud">
+                                <input id="inputSoundcloud" class="portfolio__form-input" type="text"/>
+                            </span>
+                            <span id="spotifyWrapper" class="portfolio__form-wrap form__clue" data-placeholder="Spotify">
+                                <input id="inputSpotify" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="itunesWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="iTunes">
+                                <input id="inputiTunes" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="appleMusicWrapper" class="portfolio__form-wrap form__clue" data-placeholder="Apple Music">
+                                <input id="inputAppleMusic" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="youtubeWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="YouTube">
+                                <input id="inputYoutube" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="vimeoWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Vimeo">
+                                <input id="inputVimeo" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="beatportWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Beatport">
+                                <input id="inputBeatport" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                            <span id="mixcloudWrapper" class="portfolio__form-wrap portfolio__link-wrap form__clue" data-placeholder="Mixcloud">
+                                <input id="inputMixcloud" class="portfolio__form-input" type="text" autocomplete="off" />
+                            </span>
+                        </div>
+
+                        <!-- инфа о фильтрах при поиске -->
+                        <div class="profile__section-name profile__section-name--filter">
+                            <span class="profile__section-content">Поисковые фильтры</span>
+                            <div class="portfolio__comment">
+                                <span class="portfolio__comment-text">Указанные фильтры, которые влияют на результаты вашего поиска, можно изменить после редактирования профиля в поисковом блоке.</span>
                             </div>
                         </div>
 

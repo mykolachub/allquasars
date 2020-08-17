@@ -495,6 +495,15 @@ html {
     margin-top: 0;
 }
 
+.profile__section-name .portfolio__comment{
+    padding-top: 0.5rem;
+}
+
+.profile__section-name--filter{
+    padding-bottom: 2.75rem;
+    border-bottom: var(--border-setting-section);
+}
+
 .profile__section-content {
     font-size: 1.6rem;
     font-family: var(--font-eUkrREG);
@@ -799,11 +808,6 @@ html {
 
 .form__clue--spotify .portfolio__form-input:focus {
     border: 2px solid #1ed760;
-}
-
-.portfolio__age {
-    border-bottom: var(--border-setting-section);
-    padding-bottom: 2.75rem;
 }
 
 .portfolio__age-input {
