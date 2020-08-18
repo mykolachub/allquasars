@@ -361,4 +361,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // *
+    // * клик на результат поиска
+    // *
+
+    let resultItems = document.querySelectorAll('.result__content');
+
+    resultItems.forEach(element => {
+        element.addEventListener('click', function (params) {
+            this.classList.toggle('result__content--cliked');
+        });
+    });
+
 });
