@@ -273,6 +273,21 @@ h5{
     padding: 10rem 0;
 }
 
+.block__section h1{
+    position: relative;
+}
+
+.block__section h1::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -2rem;
+    width: 15rem;
+    height: 5px;
+    background: rgba(55, 143, 246, 0.5);
+    transform: translateX(-50%);
+}
+
 .first__content {
     position: absolute;
     top: 50%;
@@ -286,6 +301,7 @@ h5{
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .block__content-illustration-padding,
@@ -415,7 +431,6 @@ h5{
     * SECOND BLOCK
 
 */
-
 .main-off{
     display: none;
 }
@@ -477,6 +492,7 @@ h5{
     background: #ffffff;
     box-shadow:  15px 15px 30px #e8e8e8, 
                 -15px -15px 30px #ffffff;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     /*border: 1px solid #b8c9df;
     border-radius: 5px;*/
     position: relative;
@@ -538,34 +554,34 @@ h5{
     margin-bottom: 10rem;
 }
 
-.sixth__block{
-    /*background: #e7eef3;*/
-}
 
 .sixth__content{
     border: 0px solid var(--color-btn-bg);
     grid-template-columns: repeat(12, 1fr);
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.sixth__content-row{
-    width: 100%;
-    height: auto;
-    grid-column: 2/12;
+.sixth__content-row:first-of-type .sixth__content-details{
+    border-top: 2px solid #378ff6;
+    border-bottom: 1px solid #378ff6;
 }
+
+.sixth__content-row:last-of-type .sixth__content-details{
+    border-top: 1px solid #378ff6;
+    border-bottom: 2px solid #378ff6;
+}
+
 
 .sixth__content-details{
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     transition: all 250ms ease;
+    border-bottom: 1px solid #378ff6;
+    border-top: 1px solid #378ff6;
 }
 
 .sixth__content-details:hover{
-    border-radius: 5px;
-    background: #ffffff;
-    box-shadow: none;
+    background: #378ff6;
+    color: white;
 }
 
 details[open] summary{
@@ -598,6 +614,7 @@ details > summary {
     transition: all 250ms ease;
     padding: 4rem 10% 4rem 0;
     position: relative;
+
 }
 
 .sixth__content-question::after{
@@ -618,11 +635,11 @@ details > summary {
 
 .sixth__content-question:hover{
     padding: 4rem 10% 4rem 4rem;
-    color: var(--color-btn-bg);
+    color: white;
 }
 
 .sixth__content-question:hover::after{
-    right: 2rem;
+    right: 4rem;
 }
 
 .sixth__content-question:focus{
@@ -642,7 +659,6 @@ details > summary {
 */
 
 .footer__block{
-    background-color: #f4f6f6;
     padding-top: 6rem;
     padding-bottom: 2rem;
     --border-color: #cdcccc;
