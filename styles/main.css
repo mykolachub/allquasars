@@ -92,13 +92,13 @@ html {
 }
 
 .header__logo-a {
+    margin-left: .75rem;
     display: inline-block;
     text-decoration: none;
     color: black;
-    font-size: 1.6rem;
-    font-family: var(--font-eUkrLGH);
-    font-weight: 400;
-    margin-left: .75rem;
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 .header__nav {
@@ -211,6 +211,62 @@ html {
     border-radius: 50%;
     -o-object-fit: contain;
     object-fit: contain;
+}
+
+/* start */
+
+.start{
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 10rem - 6.75rem); 
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid #cdcccc;*/
+    border-radius: 5px;
+}
+
+.start--disabled {
+    margin-bottom: 0;
+    display: none;
+}
+
+.start__headering,
+.start__message,
+.start__button{
+    text-align: center;
+}
+
+.start__headering{
+    margin-bottom: 2rem;
+}
+
+.start__headering span{
+    font-size: calc(1.6rem * 2);
+    font-family: var(--font-eUkrMED);
+}
+
+.start__message{
+    margin-bottom: 2rem;
+}
+
+.start__message span{
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    color: #8b8b8b;
+}
+
+.start__button-item{
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    border-radius: 5px;
+    background-color: #378ff6;
+    border: 2px solid #378ff6;
+    color: white;
+    cursor: pointer;
 }
 
 /* PROFILE */
@@ -1681,7 +1737,7 @@ html {
     color: black;
     font-size: 3.2rem;
     font-family: 'Inter', sans-serif;
-    font-family: var(--font-eUkrBLD);
+    /*font-family: var(--font-eUkrBLD);*/
 
     font-weight: 700;
     line-height: 1;

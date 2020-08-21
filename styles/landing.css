@@ -626,6 +626,7 @@ details > summary {
 
 .sixth__content-details h4{
     padding: 0rem 6rem 2rem 6rem;
+    color: #8b8b8b;
 }
 
 /*
@@ -668,7 +669,7 @@ details > summary {
     color: black;
     font-size: 3.2rem;
     font-family: 'Inter', sans-serif;
-    font-family: var(--font-eUkrBLD);
+    /*font-family: var(--font-eUkrBLD);*/
 
     font-weight: 700;
     line-height: 1;
