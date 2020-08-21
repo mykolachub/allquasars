@@ -273,11 +273,13 @@ h5{
     padding: 10rem 0;
 }
 
-.block__section h1{
+.block__section h1,
+.block__section h2{
     position: relative;
 }
 
-.block__section h1::before{
+.block__section h1::before,
+.block__section h2::before{
     position: absolute;
     content: '';
     left: 50%;
@@ -556,32 +558,17 @@ h5{
 
 
 .sixth__content{
-    border: 0px solid var(--color-btn-bg);
-    grid-template-columns: repeat(12, 1fr);
+}
+
+.sixth__content-row{
+    margin-bottom: 1rem;
     border-radius: 5px;
-    background: #ffffff;
 }
-
-.sixth__content-row:first-of-type .sixth__content-details{
-    border-top: 2px solid #378ff6;
-    border-bottom: 1px solid #378ff6;
-}
-
-.sixth__content-row:last-of-type .sixth__content-details{
-    border-top: 1px solid #378ff6;
-    border-bottom: 2px solid #378ff6;
-}
-
 
 .sixth__content-details{
     transition: all 250ms ease;
-    border-bottom: 1px solid #378ff6;
-    border-top: 1px solid #378ff6;
-}
-
-.sixth__content-details:hover{
-    background: #378ff6;
-    color: white;
+    background-color: #f4f6f6;
+    border-radius: 5px;
 }
 
 details[open] summary{
@@ -589,15 +576,11 @@ details[open] summary{
 }
 
 details[open] summary::after {
-    background-image: url(../icons/minus-icon.svg);
+    background-image: url(../images/landing/minus.svg);
 }
 
 details[open] .sixth__content-question{
-    padding: 4rem 10% 4rem 2rem;
-}
-
-details[open] .sixth__content-question:after{
-    right: 2rem;
+    color: black;
 }
 
 details summary::-webkit-details-marker {
@@ -612,7 +595,7 @@ details > summary {
     width: 100%;
     cursor: pointer;
     transition: all 250ms ease;
-    padding: 4rem 10% 4rem 0;
+    padding: 2rem 4rem 2rem 6rem;
     position: relative;
 
 }
@@ -621,12 +604,12 @@ details > summary {
     content: '';
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 2rem;
     transform: translateY(-50%);
     width: 25px;
     height: 25px;
     transition: all 250ms ease;
-    background-image: url(../icons/plus-icon.svg);
+    background-image: url(../images/landing/plus.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -634,12 +617,7 @@ details > summary {
 }
 
 .sixth__content-question:hover{
-    padding: 4rem 10% 4rem 4rem;
-    color: white;
-}
-
-.sixth__content-question:hover::after{
-    right: 4rem;
+    color: #378ff6;
 }
 
 .sixth__content-question:focus{
@@ -647,9 +625,7 @@ details > summary {
 }
 
 .sixth__content-details h4{
-    padding: 0rem 10% 0rem 2rem;
-    margin-left: 2rem;
-    border-left: 2px solid var(--color-btn-bg);
+    padding: 0rem 6rem 2rem 6rem;
 }
 
 /*
