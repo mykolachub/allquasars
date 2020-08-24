@@ -1593,9 +1593,9 @@ html {
     transform: translateY(calc(0% + 4.6rem));
 }
 
-.result__content--cliked .result__nickname{
+/*.result__content--cliked .result__nickname{
    opacity: 0;
-}
+}*/
 
 .result__content--cliked:hover .result__info{
     transform: translateY(calc(0% + 4.6rem));
