@@ -372,7 +372,7 @@ html {
     top: 2rem;
 }
 
-.sidebar__profile {
+.sidebar__suggestion {
     padding: 2.75rem;
     background-color: white;
     border-radius: 5px;
@@ -381,45 +381,64 @@ html {
     margin-bottom: 2rem;
 }
 
-.sidebar__profile-image {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
+.sidebar__suggestion-headering{
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
     margin-bottom: 2rem;
 }
 
-.sidebar__profile-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: all 250ms ease;
-}
-
-.sidebar__profile-btn {
+.sidebar__suggestion-item {
+    display: -ms-grid;
+    display: grid;
     width: 100%;
     height: auto;
-}
-
-.sidebar__profile-btn button {
-    padding: 1rem 2rem;
-    width: 100%;
-    color: black;
-    border-radius: 5px;
-    background-color: #f4f6f6;
-    font-size: 1.6rem;
-    font-family: var(--font-eUkrLGH);
-    border: 2px solid #f4f6f6;
-    cursor: pointer;
+    -ms-grid-columns: 50px 1fr;
+    grid-template-columns: 50px 1fr;
+    grid-column-gap: 2rem;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    -webkit-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
     transition: all 250ms ease;
+    cursor: pointer;
+    margin-bottom: 2rem;
 }
 
-.sidebar__profile-btn button:hover {
+.sidebar__suggestion-item:hover{
     color: #378ff6;
 }
+
+.sidebar__suggestion-item:last-of-type{
+    margin-bottom: 0;
+}
+
+.sidebar__suggestion-image {
+    grid-row: 1/-1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 100%;
+    height: 50px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.sidebar__suggestion-text {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+}
+
 
 /* footer */
 
