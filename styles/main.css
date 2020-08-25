@@ -1388,7 +1388,7 @@ html {
 }
 
 .search__filter-item:hover {
-    border-color: #378ff6;
+    color: #378ff6;
 }
 
 .search__filter-text {
@@ -1398,12 +1398,12 @@ html {
 }
 
 .search__filter--selected {
-    border: 2px solid #f4f6f6;
-    background-color: #f4f6f6;
+    border: 2px solid transparent;
+    background-color: rgba(55, 143, 246, 0.1);
 }
 
 .search__filter--selected:hover {
-    border-color: #f4f6f6;
+    border-color: transparent;
 }
 
 .search__filter--selected .search__filter-text {
