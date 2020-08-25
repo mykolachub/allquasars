@@ -46,37 +46,71 @@
             <main class="main">
                 <div class="main__profile">
                     <div class="profile__main">
-                        <div class="profile__avatar">
-                            <img class="profile__avatar-item" src="images/main/test2.jpg" alt="avatar">
-                        </div>
-                        <div class="profile__info">
+                        <div class="profile__sidebar">
 
-                            <!-- имя -->
+                            <!-- avatar -->
+                            <div class="profile__avatar">
+                                <img class="profile__avatar-item" src="images/main/test2.jpg" alt="avatar">
+                            </div>
+
+                            <!-- name -->
                             <div class="profile__name">
                                 <span class="profile__name-item">Holland Ward</span>
                             </div>
 
-                            <!-- никнейм -->
+                            <!-- nickname -->
                             <div class="profile__nickname">
                                 <span class="profile__nickname-item">@hollandward</span>
                             </div>
 
-                            <!-- возраст и страна -->
+                            <!-- age and country -->
                             <div class="profile__agecountry">
-
-                                <!-- возраст -->
                                 <span class="profile__agecountry-item">24,</span>
-
-                                <!-- страна -->
                                 <span class="profile__agecountry-item">USA</span>
                             </div>
 
-                            <!-- фильтры -->
+                            <!-- filter -->
                             <div class="profile__filter">
                                 <span class="profile__filter-item">Диджей</span>
+                                <span class="profile__filter-item">Модель</span>
+                                <span class="profile__filter-item">Танцор</span>
                                 <span class="profile__filter-item">USA</span>
-                                <span class="profile__filter-item">171-180 см</span>
+                                <span class="profile__filter-item">Модель</span>
                             </div>
+                        </div>
+                        
+                        <div class="profile__info">
+                            <ul class="profile__nav">
+                                <li class="profile__nav-item profile__nav-item--active">
+                                    <span class="profile__nav-icon">
+                                        <svg class="profile__nav-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="profile__nav-path" d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor" />
+                                            <path class="profile__nav-path" d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor" />
+                                            <path class="profile__nav-path" d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor"/>
+                                        </svg>
+                                    </span>
+                                    <span class="profile__nav-text">Инфо</span>
+                                </li>
+                                <li class="profile__nav-item">
+                                    <span class="profile__nav-icon">
+                                        <svg class="profile__nav-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="profile__nav-path" fill-rule="evenodd" clip-rule="evenodd" d="M7 7C5.34315 7 4 8.34315 4 10C4 11.6569 5.34315 13 7 13C8.65685 13 10 11.6569 10 10C10 8.34315 8.65685 7 7 7ZM6 10C6 9.44772 6.44772 9 7 9C7.55228 9 8 9.44772 8 10C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 10Z" fill="currentColor" />
+                                            <path class="profile__nav-path" fill-rule="evenodd" clip-rule="evenodd" d="M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H7.31374L14.1924 12.1214C15.364 10.9498 17.2635 10.9498 18.435 12.1214L22 15.6863V6C22 5.44772 21.5523 5 21 5ZM21 19H10.1422L15.6066 13.5356C15.9971 13.145 16.6303 13.145 17.0208 13.5356L21.907 18.4217C21.7479 18.7633 21.4016 19 21 19Z" fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <span class="profile__nav-text">Галерея</span>
+                                </li>
+                                <li class="profile__nav-item">
+                                    <span class="profile__nav-icon">
+                                        <svg class="profile__nav-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                            <path class="profile__nav-path" d="M14.8284 12L16.2426 13.4142L19.071 10.5858C20.6331 9.02365 20.6331 6.49099 19.071 4.9289C17.509 3.3668 14.9763 3.3668 13.4142 4.9289L10.5858 7.75732L12 9.17154L14.8284 6.34311C15.6095 5.56206 16.8758 5.56206 17.6568 6.34311C18.4379 7.12416 18.4379 8.39049 17.6568 9.17154L14.8284 12Z" fill="currentColor" />
+                                            <path class="profile__nav-path" d="M12 14.8285L13.4142 16.2427L10.5858 19.0711C9.02372 20.6332 6.49106 20.6332 4.92896 19.0711C3.36686 17.509 3.36686 14.9764 4.92896 13.4143L7.75739 10.5858L9.1716 12L6.34317 14.8285C5.56212 15.6095 5.56212 16.8758 6.34317 17.6569C7.12422 18.4379 8.39055 18.4379 9.1716 17.6569L12 14.8285Z" fill="currentColor" />
+                                            <path class="profile__nav-path" d="M14.8285 10.5857C15.219 10.1952 15.219 9.56199 14.8285 9.17147C14.4379 8.78094 13.8048 8.78094 13.4142 9.17147L9.1716 13.4141C8.78107 13.8046 8.78107 14.4378 9.1716 14.8283C9.56212 15.2188 10.1953 15.2188 10.5858 14.8283L14.8285 10.5857Z" fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <span class="profile__nav-text">Связь</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -84,14 +118,7 @@
                     <div class="sidebar__content">
 
                         <div class="sidebar__profile">
-                            <div class="sidebar__profile-image">
-                                <img src="images/main/profile.jpg" alt="avatar">
-                            </div>
-                            <div class="sidebar__profile-btn">
-
-                                <!-- при клике откр редактирования акк -->
-                                <button id="sidebarProfileBtn">Настроить профиль</button>
-                            </div>
+                            
                         </div>
 
                         <!-- ad -->
