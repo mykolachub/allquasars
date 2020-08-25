@@ -274,7 +274,6 @@ html {
     margin-bottom: 0.25rem;
 }
 
-
 .profile__name{
     font-size: calc(1.6rem * 2);
     font-family: var(--font-eUkrREG);
@@ -315,6 +314,7 @@ html {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
     list-style: none;
+    margin-bottom: 2rem;
 }
 
 .profile__nav-item{
@@ -402,7 +402,7 @@ html {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
     cursor: pointer;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .sidebar__suggestion-item:hover{
@@ -439,6 +439,108 @@ html {
     font-family: var(--font-eUkrLGH);
 }
 
+.profile__card{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: white;
+    box-shadow: var(--shadow-block);
+    border-radius: 5px;
+    /*box-shadow:  0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 4rem;
+    grid-column-gap: 2rem;
+}
+
+.profile__card-close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.profile__card-close img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card__image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.card__image-item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-mask-origin: view-box;
+    mask-origin: view-box;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    mask-image: url(../images/user/imagemask.svg);
+}
+
+.card__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;    
+}
+
+.card__text-headering{
+    font-size: calc(1.6rem * 2);
+    font-family: var(--font-eUkrREG);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card__text-image{
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.card__text-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card__text-subheadering{
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    color: #8b8b8b;
+    margin-bottom: 2.75rem;
+}
+
+.card__a a{
+    display: inline-block;
+    color: #28a745;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    border-radius: 5px;
+    background-color: rgba(40, 167, 69, 0.1);
+    padding: 1rem 2rem;
+    transition: all 250ms ease;
+}
+
+.card__a a:hover{
+    background-color: rgba(40, 167, 69, 1);
+    color: white;
+}
 
 /* footer */
 
