@@ -213,6 +213,51 @@ html {
     object-fit: contain;
 }
 
+/* back */
+
+.back{
+    width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.back__content{
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-family: var(--font-eUkrLGH);
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    width: auto;
+    transition: all 250ms ease;
+    margin-left: 2.75rem;
+}
+
+.back__content:hover{
+    color: #378ff6;
+}
+
+.back__icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.back__svg{
+    width: 100%;
+    height: 100%;
+    transition: all 250ms ease;
+    object-fit: contain;
+}
+
+.back__text{
+    transition: all 250ms ease;
+    display: inline-block;
+}
+
 /* main */
 
 .main{
@@ -445,12 +490,15 @@ html {
     position: relative;
     background-color: white;
     box-shadow: var(--shadow-block);
-    border-radius: 5px;
+    border-radius: 7px;
     /*box-shadow:  0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);*/
+    box-shadow:  7px 7px 30px #e6e6e6, 
+             -7px -7px 30px #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem 4rem;
     grid-column-gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .profile__card-close{
@@ -463,6 +511,12 @@ html {
 }
 
 .profile__card-close img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile__card-close svg{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -503,6 +557,7 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
 .card__text-image{
