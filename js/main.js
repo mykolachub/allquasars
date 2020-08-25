@@ -346,6 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filterWrapper = document.getElementById('filterWrapper');
 
     filterBtn.addEventListener('click', function () {
+        filterBtn.classList.toggle('search__btn--active');
         filterWrapper.classList.toggle('search__filter--closed');
     });
 

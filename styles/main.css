@@ -421,7 +421,7 @@ html {
 }
 
 .profile__nav-btn {
-    width: 100%;
+    width: auto;
     border: 0;
     border-radius: 5px;
     background-color: transparent;
@@ -429,8 +429,11 @@ html {
     text-align: left;
     background-color: #f4f6f6;
     border: 2px solid #f4f6f6;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: all 250ms ease;
 }
 
 .profile__nav-icon,
@@ -444,7 +447,7 @@ html {
     margin-left: 1rem;
 }
 
-.profile__nav-icon img {
+.profile__nav-icon svg {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -453,52 +456,15 @@ html {
 .profile__nav-btn-item {
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
-    color: black;
     padding: 1rem 2rem 1rem 1rem;
     transition: all 250ms ease;
 }
 
-.profile__nav-btn:hover .profile__nav-btn-item {
+.profile__nav-item:hover .profile__nav-btn-profile{
     color: #378ff6;
+    background-color: rgba(55, 143, 246, 0.1);
+    border-color: rgba(55, 143, 246, 0.001);
 }
-
-/*.profile__nav-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 5rem;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background-position: center;
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-.profile__nav-btn-profile::before {
-    background-image: url(../images/main/user.svg);
-}
-
-.profile__nav-btn-lock::before {
-    background-image: url(../images/main/lock.svg);
-}
-
-.profile__nav-btn-help::before {
-    background-image: url(../images/main/info.svg);
-}
-
-.profile__nav-btn:hover,
-.profile__nav-btn--active {
-    color: #378ff6;
-    background-color: #f4f6f6;
-}*/
 
 .profile__nav-a {
     width: 100%;
@@ -1134,7 +1100,7 @@ html {
 }
 
 .portfolio__filter-item:hover {
-    border-color: #378ff6;
+    color: #378ff6;
 }
 
 .portfolio__filter-text {
@@ -1144,12 +1110,12 @@ html {
 }
 
 .portfolio__filter--selected {
-    border: 2px solid #f4f6f6;
-    background-color: #f4f6f6;
+    border: 2px solid transparent;
+    background-color: rgba(55, 143, 246, 0.1);
 }
 
 .portfolio__filter--selected:hover {
-    border-color: #f4f6f6;
+    border-color: transparent;
 }
 
 .portfolio__filter--selected .portfolio__filter-text {
@@ -1315,6 +1281,12 @@ html {
     color: #378ff6;
 }
 
+.search__btn--active{
+    color: #378ff6;
+    border-color: transparent;
+    background-color: rgba(55, 143, 246, 0.1);
+}
+
 .search__icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -1322,7 +1294,7 @@ html {
     margin-left: 1rem;
 }
 
-.search__icon img {
+.search__icon svg {
     width: 100%;
     height: 100%;
     object-fit: contain;
