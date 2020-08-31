@@ -407,8 +407,16 @@
                             </span>
                         </div>
 
+                        <!-- комментарий если ошибка -->
+                        <!-- убираешь у span .portfolio__error-item--disabled и сообщение показывается -->
+                        <!-- изначально все скрыто -->
+                        <div class="portfolio__error portfolio__error--grided">
+                            <span class="portfolio__error-item portfolio__error-item--mail portfolio__error-item--disabled">Неверный адрес электронной почты</span>
+                            <span class="portfolio__error-item portfolio__error-item--nickname portfolio__error-item--disabled">Этот никнейм уже занят</span>
+                        </div>
+
                         <!-- пароль -->
-                        <div class="portfolio__form portfolio__form--grided portfolio__password">
+                        <div class="portfolio__form portfolio__form--grided">
                             <span id="passwordWrapper" class="portfolio__form-wrap form__password-wrap form__clue" data-placeholder="Пароль">
                                 <input id="inputPassword" class="portfolio__form-input form__password-input" value="password" type="password"  autocomplete="off"/>
                             </span>
@@ -417,8 +425,16 @@
                             </span>
                         </div>
 
+                        <!-- комментарий если ошибка -->
+                        <!-- убираешь у span .portfolio__error-item--disabled и сообщение показывается -->
+                        <!-- изначально все скрыто -->
+                        <div class="portfolio__error portfolio__error--grided">
+                            <span class="portfolio__error-item portfolio__error-item--mail portfolio__error-item--disabled">Пароль должен содержать ...</span>
+                            <span class="portfolio__error-item portfolio__error-item--nickname portfolio__error-item--disabled">Пароль не совпадает</span>
+                        </div>
+
                         <!-- удаление аккаунта -->
-                        <div class="profile__section-name">
+                        <div class="profile__section-name profile__section-name--danger">
                             <span style="color: #f63737;" class="profile__section-content">Опасная зона</span>
                         </div>
                         <div class="portfolio__danger">

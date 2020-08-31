@@ -529,6 +529,11 @@ html {
     border-bottom: var(--border-setting-section);
 }
 
+.profile__section-name--danger{
+    border-top: var(--border-setting-section);
+    padding-top: 2rem;
+}
+
 .profile__section-content {
     font-size: 1.6rem;
     font-family: var(--font-eUkrREG);
@@ -686,13 +691,39 @@ html {
     outline: none;
 }
 
-.portfolio__form {
+.portfolio__form,
+.portfolio__error {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
-.portfolio__form--grided {
+.portfolio__error{
+    font-size: 1.4rem;
+    font-family: var(--font-eUkrLGH);
+    color: #e52d27;
+    margin-top: 0rem;
+}
+
+.portfolio__error-item{
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.portfolio__error-item--disabled{
+    display: none;
+}
+
+.portfolio__error-item:first-of-type{
+    grid-column: 1/2;
+}
+
+.portfolio__error-item:last-of-type{
+    grid-column: 2/-1;
+}
+
+.portfolio__form--grided,
+.portfolio__error--grided {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
