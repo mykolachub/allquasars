@@ -179,6 +179,14 @@
                             </span>
                         </div>
 
+                        <!-- комментарий если ошибка -->
+                        <!-- убираешь у span .portfolio__error-item--disabled и сообщение показывается -->
+                        <!-- изначально все скрыто -->
+                        <div class="portfolio__error portfolio__error--grided">
+                            <span class="portfolio__error-item portfolio__error-item--name portfolio__error-item--disabled">Неверно указано имя</span>
+                            <span class="portfolio__error-item portfolio__error-item--surname portfolio__error-item--disabled">Неверно указана фамилия</span>
+                        </div>
+
                         <!-- др и тип пользователя -->
                         <div class="portfolio__form portfolio__form--grided portfolio__age">
                             <span id="dateWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Дата рождения">
@@ -188,6 +196,14 @@
                             <span id="typeWrapper" class="portfolio__form-wrap portfolio__initials-wrap form__clue" data-placeholder="Тип">
                                 <input id="inputType" class="portfolio__form-input portfolio__type-input" type="text" value="Заказчик" autocomplete="off" tabindex="-1" />
                             </span>
+                        </div>
+
+                        <!-- комментарий если ошибка -->
+                        <!-- убираешь у span .portfolio__error-item--disabled и сообщение показывается -->
+                        <!-- изначально все скрыто -->
+                        <div class="portfolio__error portfolio__error--grided">
+                            <span class="portfolio__error-item portfolio__error-item--date portfolio__error-item--disabled">Неверно указана дата рождения</span>
+                            <span class="portfolio__error-item portfolio__error-item--type portfolio__error-item--disabled"></span>
                         </div>
 
                         <!-- фильтры -->
@@ -429,8 +445,8 @@
                         <!-- убираешь у span .portfolio__error-item--disabled и сообщение показывается -->
                         <!-- изначально все скрыто -->
                         <div class="portfolio__error portfolio__error--grided">
-                            <span class="portfolio__error-item portfolio__error-item--mail portfolio__error-item--disabled">Пароль должен содержать ...</span>
-                            <span class="portfolio__error-item portfolio__error-item--nickname portfolio__error-item--disabled">Пароль не совпадает</span>
+                            <span class="portfolio__error-item portfolio__error-item--password portfolio__error-item--disabled">Пароль должен содержать ...</span>
+                            <span class="portfolio__error-item portfolio__error-item--passwordcheck portfolio__error-item--disabled">Пароль не совпадает</span>
                         </div>
 
                         <!-- удаление аккаунта -->
