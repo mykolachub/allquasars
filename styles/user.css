@@ -17,18 +17,35 @@
     --font-Montserrat: 'Montserrat', sans-serif;
 
     /* colors */
+
+    /*
+    
+    * rgb(0, 117, 202) - темно синий
+    * rgb(55, 143, 246) - изначально синий
+    * rgb(0, 134, 114) - темно зеленый
+    
+    */
+
+    --main-color: rgb(55, 143, 246);
+    --main-color-alpha: rgba(55, 143, 246, 0.1);
+    --main-color-alpha75: rgba(55, 143, 246, 0.75);
+
+    --green: rgb(40, 167, 69);
+    --green-alpha: rgba(40, 167, 69, 0.1);
+
+
     --color-page-bg: #f4f6f6;
-    --color-btn-bg: #378ff6;
+    --color-btn-bg: var(--main-color);
     --сolor-profile-bg: #f4f6f6;
-    --color-link-hover: #378ff6;
+    --color-link-hover: var(--main-color);
     --color-avatar-profile-button-disabled: #8b8b8b;
-    --color-avatar-profile-button-hover: #378ff6;
+    --color-avatar-profile-button-hover: var(--main-color);
     --color-avatar-profile-background: #f4f6f6;
 
     /* borders */
     --border-avatar-profile-unset: 2px dashed #cdcccc;
     --border-avatar-profile-button: 2px solid #cdcccc;
-    --border-avatar-profile-button-hover: 2px solid #378ff6;
+    --border-avatar-profile-button-hover: 2px solid var(--main-color);
     --border-setting-section: 2px solid #f1f1f1;
 
     /* shadows */
@@ -243,7 +260,7 @@ html {
 }
 
 .back__content:hover{
-    color: #378ff6;
+    color: var(--main-color);
 }
 
 .back__icon{
@@ -345,9 +362,9 @@ html {
 
 .profile__filter-item{
     font-size: 1.6rem;
-    color: #378ff6;
+    color: var(--main-color);
     font-family: var(--font-eUkrLGH);
-    background-color: rgba(55, 143, 246, 0.1);
+    background-color: var(--main-color-alpha);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     display: inline-block;
@@ -383,12 +400,12 @@ html {
 }
 
 .profile__nav-item--active{
-    color: #378ff6;
-    background-color: rgba(55, 143, 246, 0.1);
+    color: var(--main-color);
+    background-color: var(--main-color-alpha);
 }
 
 .profile__nav-item:hover{
-    color: #378ff6;
+    color: var(--main-color);
 }
     
 .profile__nav-icon{
@@ -514,18 +531,18 @@ html {
 
 .card__a a{
     display: inline-block;
-    color: #28a745;
+    color: var(--green);
     text-decoration: none;
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
     border-radius: 5px;
-    background-color: rgba(40, 167, 69, 0.1);
+    background-color: var(--green-alpha);
     padding: 1rem 2rem;
     transition: all 250ms ease;
 }
 
 .card__a a:hover{
-    background-color: rgba(40, 167, 69, 1);
+    background-color: var(--green);
     color: white;
 }
 
@@ -557,7 +574,7 @@ html {
     left: .7rem;
     width: 2px;
     height: 100%;
-    background: rgba(55, 143, 246, 0.75);
+    background: var(--main-color-alpha75);
     transform: translateX(-50%);
     border-radius: 5px;
 }
@@ -695,7 +712,7 @@ html {
 }
 
 .sidebar__suggestion-item:hover{
-    color: #378ff6;
+    color: var(--main-color);
 }
 
 .sidebar__suggestion-item:last-of-type{
