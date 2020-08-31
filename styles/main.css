@@ -503,7 +503,7 @@ html {
     height: auto;
     background-color: white;
     border-radius: 5px;
-    padding: 2.75rem;
+    padding: 2.75rem 2.75rem 0 2.75rem;
     box-shadow: var(--shadow-block);
 }
 
@@ -1146,6 +1146,16 @@ html {
     border-radius: 5px;
 }
 
+.profile__submit--sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    background-color: white;
+    z-index: 10;
+    padding: 2rem 0 2.75rem 0;
+    border-top: var(--border-setting-section);
+}
+
 .profile__submit {
     margin: 0;
 }
@@ -1156,6 +1166,10 @@ html {
     color: #8b8b8b;
     font-size: 1.6rem;
     font-family: var(--font-eUkrLGH);
+}
+
+.profile__submit-last{
+    font-style: italic;
 }
 
 .portfolio__danger-action,
