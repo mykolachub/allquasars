@@ -1550,6 +1550,11 @@ html {
     line-height: 0.5;
 }
 
+.result__info-filter--customer{
+    color: rgb(218, 165, 32);
+    background-color: rgba(218, 165, 32, 0.1);
+}
+
 .result__content:hover .result__info{
     transform: translateY(calc(100% - 4.6rem));
     transition: all 500ms ease;
