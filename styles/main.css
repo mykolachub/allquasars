@@ -1167,7 +1167,8 @@ html {
 /* submit */
 
 .portfolio__danger,
-.profile__submit {
+.profile__submit,
+.portfolio__cancel {
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
@@ -1192,7 +1193,8 @@ html {
 }
 
 .portfolio__danger-message,
-.profile__submit-message {
+.profile__submit-message,
+.portfolio__cancel-message {
     display: block;
     color: #8b8b8b;
     font-size: 1.6rem;
@@ -1204,6 +1206,7 @@ html {
 }
 
 .portfolio__danger-action,
+.portfolio__cancel-action,
 .profile__submit-action {
     display: flex;
     justify-content: flex-end;
@@ -1211,6 +1214,7 @@ html {
 }
 
 .portfolio__danger-btn,
+.portfolio__cancel-btn,
 .profile__submit-btn {
     display: inline-block;
     width: auto;
@@ -1232,6 +1236,10 @@ html {
 
 .portfolio__danger-btn:hover {
     border-color: #f63737;
+}
+
+.portfolio__cancel-btn:hover {
+    border-color: #378ff6;
 }
 
 .profile__submit-btn:hover {
