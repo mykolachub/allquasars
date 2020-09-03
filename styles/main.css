@@ -221,12 +221,10 @@ html {
     width: 100%;
     height: auto;
     min-height: calc(100vh - 10rem - 6.75rem); 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 2rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*border: 2px solid #cdcccc;*/
+    grid-column-gap: 2rem;
     border-radius: 5px;
 }
 
@@ -235,10 +233,20 @@ html {
     display: none;
 }
 
+.start__text{
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .start__headering,
 .start__message,
 .start__button{
-    text-align: center;
+    position: relative;
+    display: inline-block;
 }
 
 .start__headering{
@@ -246,18 +254,39 @@ html {
 }
 
 .start__headering span{
-    font-size: calc(1.6rem * 2);
+    font-size: 4rem;
     font-family: var(--font-eUkrMED);
 }
 
 .start__message{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.start__message span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12.5rem;
+    height: 12.5rem;
+    transform: translate(100%,-100%);
+    background-image: url(../images/main/dot1-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0 !important;
 }
 
 .start__message span{
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-family: var(--font-eUkrLGH);
-    color: #8b8b8b;
+    color: rgba(0,0,0, 0.6);
+    position: relative;
+    background-color: #f4f6f6;
+}
+
+.start__button{
+    margin-bottom: 5rem;
 }
 
 .start__button-item{
@@ -269,6 +298,45 @@ html {
     border: 2px solid #378ff6;
     color: white;
     cursor: pointer;
+}
+
+.start__picture{
+    grid-column: 2/-1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.start__picture-content{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.start__picture-content::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10rem;
+    height: 10rem;
+    transform: translate(25%,-150%);
+    background-image: url(../images/main/dot2-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+}
+
+.start__picture-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* PROFILE */
